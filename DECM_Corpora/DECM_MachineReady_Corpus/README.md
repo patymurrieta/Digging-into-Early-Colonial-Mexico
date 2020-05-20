@@ -22,7 +22,7 @@ This digital version of the RGs corpus contains only the historical information 
 ``` 
 1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña. 
 Each of these files contains the textual accounts answering the 50 questions royal decree issued 
-by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
+by King Phillip of Spain, compiled between 1579 and 1585 in New Spain:
 
           1_RG_Guatemala_Acuna.txt
           2_RG_Antequera_T1_Acuna.txt

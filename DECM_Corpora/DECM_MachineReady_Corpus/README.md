@@ -46,7 +46,10 @@ del Paso y Troncoso, which provides additional information about the 16th centur
 
           14_Suma_Visita_Pueblos_DelPasoYTroncoso.txt
 
-4. The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain consisting of 50 questions that had to be answered by the Spanish religious and political authorities located in the New Spain. The questionnaire is organised into four major topics: nature, morals and politics, military organisation and religious life and systems: 
+4. The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain 
+consisting of 50 questions that had to be answered by the Spanish religious and political authorities located 
+in the New Spain. The questionnaire is organised into four major topics: nature, morals and politics, military 
+organisation and religious life and systems: 
 
           RG_Instrucción.txt
 ``` 

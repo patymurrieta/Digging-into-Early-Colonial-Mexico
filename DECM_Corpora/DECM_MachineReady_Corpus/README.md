@@ -7,7 +7,6 @@ Tackling important historical and methodological questions, and highly demanding
 
 Our highly interdisciplinary team is combining techniques from different disciplines, including Corpus Linguistics, Text Mining, Natural Language Processing, Machine Learning, and Geographic Information Systems, to address questions related to the recording of information about indigenous cultures, the Spanish exploration of indigenous social and religious concepts, the appropriation and ideas about place and space in the indigenous world, and their attitudes towards politics and economy. 
 
-
 ### Link to the webpage of the project: 
 [https://www.lancaster.ac.uk/digging-ecm/]
 
@@ -21,7 +20,9 @@ This digital version of the RGs corpus contains only the historical information 
 
 ### Content: 
 ``` 
-1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña. Each of these files contains the textual accounts answering the 50 questions royal decree issued by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
+1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña. 
+Each of these files contains the textual accounts answering the 50 questions royal decree issued 
+by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
 
           1_RG_Guatemala_Acuna.txt
           2_RG_Antequera_T1_Acuna.txt
@@ -34,14 +35,14 @@ This digital version of the RGs corpus contains only the historical information 
           9_RG_Michoacan_Acuna.txt
           10_RG_Nueva Galicia_Acuna.txt
 
-
-
-2. Two volumes of the Relaciones Histórico-geográficas de la Gobernación de Yucatán edited by Mercedes de la Garza, which complement the work of Acuña:
+2. Two volumes of the Relaciones Histórico-geográficas de la Gobernación de Yucatán edited by 
+Mercedes de la Garza, which complement the work of Acuña:
 
           11_RGs_Yucatan_T1_DeLaGarza.txt
           12_RGs_Yucatan_T2_DeLaGarza.txt
 
-3. Volume 1 of the Papeles de la Nueva España. Segunda Serie Geográfica y Estadística (1905), edited by Francisco del Paso y Troncoso, which provides additional information about the 16th century geographies:
+3. Volume 1 of the Papeles de la Nueva España. Segunda Serie Geográfica y Estadística (1905), edited by Francisco 
+del Paso y Troncoso, which provides additional information about the 16th century geographies:
 
           14_Suma_Visita_Pueblos_DelPasoYTroncoso.txt
 

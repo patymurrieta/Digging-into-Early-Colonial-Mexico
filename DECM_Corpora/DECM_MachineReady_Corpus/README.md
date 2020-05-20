@@ -11,23 +11,26 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### Link to the webpage of the project: 
 [https://www.lancaster.ac.uk/digging-ecm/]
 
-> ### How to cite this resource: 
-> Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) DECM Machine Ready Corpus. T-AP Digging into Early Colonial Mexico Project. DOI: 10.6084/m9.figshare.12048729
-
-Content: 
+### How to cite this resource: 
+``` 
+Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) 
+DECM Machine Ready Corpus. T-AP Digging into Early Colonial Mexico Project. DOI: 10.6084/m9.figshare.12048729
+```
+``` 
+### Content: 
 
 1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña which include the following: 
 
-  1_RG_Guatemala_Acuna.txt
-  2_RG_Antequera_T1_Acuna.txt
-  3_RG_Antequera_T2_Acuna.txt
-  4_RG_Tlaxcala_T1_Acuna.txt
-  5_RG_Tlaxcala_T2_Acuna.txt
-  6_RG_Mexico_T1_Acuna.txt
-  7_RG_Mexico_T2_Acuna.txt
-  8_RG_Mexico_T3_Acuna.txt
-  9_RG_Michoacan_Acuna.txt
-  10_RG_Nueva Galicia_Acuna.txt
+*1_RG_Guatemala_Acuna.txt
+*2_RG_Antequera_T1_Acuna.txt
+*3_RG_Antequera_T2_Acuna.txt
+*4_RG_Tlaxcala_T1_Acuna.txt
+*5_RG_Tlaxcala_T2_Acuna.txt
+*6_RG_Mexico_T1_Acuna.txt
+*7_RG_Mexico_T2_Acuna.txt
+*8_RG_Mexico_T3_Acuna.txt
+*9_RG_Michoacan_Acuna.txt
+*10_RG_Nueva Galicia_Acuna.txt
 
 Each of these files contains the textual accounts answering the 50 questions royal decree issued by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
 
@@ -43,7 +46,7 @@ Each of these files contains the textual accounts answering the 50 questions roy
 -The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain consisting of 50 questions that had to be answered by the Spanish religious and political authorities located in the New Spain. The questionnaire is organised into four major topics: nature, morals and politics, military organisation and religious life and systems: 
 
 RG_Instrucción.txt
-
+``` 
 
 -The README file with metadata:
 

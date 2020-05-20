@@ -16,41 +16,36 @@ Our highly interdisciplinary team is combining techniques from different discipl
 Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) 
 DECM Machine Ready Corpus. T-AP Digging into Early Colonial Mexico Project. DOI: 10.6084/m9.figshare.12048729
 ```
-``` 
+### Corpus description: 
+This digital version of the RGs corpus contains only the historical information produced in the 16th century. All the comments and footnotes by René Acuña and Mercedes de la Garza have been removed to provide a clean version of the transcribed documents. This version of the corpus is now ready to be used for Text Mining, Machine Learning, Natural Language Processing, Corpus Lingüistics, and any other computational methodologies available for the study and exploration of historical textual sources. 
+
 ### Content: 
-
-1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña which include the following: 
-
-*1_RG_Guatemala_Acuna.txt
-*2_RG_Antequera_T1_Acuna.txt
-*3_RG_Antequera_T2_Acuna.txt
-*4_RG_Tlaxcala_T1_Acuna.txt
-*5_RG_Tlaxcala_T2_Acuna.txt
-*6_RG_Mexico_T1_Acuna.txt
-*7_RG_Mexico_T2_Acuna.txt
-*8_RG_Mexico_T3_Acuna.txt
-*9_RG_Michoacan_Acuna.txt
-*10_RG_Nueva Galicia_Acuna.txt
-
-Each of these files contains the textual accounts answering the 50 questions royal decree issued by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
-
--Two volumes of the Relaciones Histórico-geográficas de la Gobernación de Yucatán edited by Mercedes de la Garza, which complement the work of Acuña:
-
-11_RGs_Yucatan_T1_DeLaGarza.txt
-12_RGs_Yucatan_T2_DeLaGarza.txt
-
--Volume 1 of the Papeles de la Nueva España. Segunda Serie Geográfica y Estadística (1905), edited by Francisco del Paso y Troncoso, which provides additional information about the 16th century geographies:
-
-14_Suma_Visita_Pueblos_DelPasoYTroncoso.txt
-
--The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain consisting of 50 questions that had to be answered by the Spanish religious and political authorities located in the New Spain. The questionnaire is organised into four major topics: nature, morals and politics, military organisation and religious life and systems: 
-
-RG_Instrucción.txt
 ``` 
+1. The ten volumes of the Relaciones Geográficas del Siglo XVI (RG) edited by René Acuña. Each of these files contains the textual accounts answering the 50 questions royal decree issued by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
 
--The README file with metadata:
+          1_RG_Guatemala_Acuna.txt
+          2_RG_Antequera_T1_Acuna.txt
+          3_RG_Antequera_T2_Acuna.txt
+          4_RG_Tlaxcala_T1_Acuna.txt
+          5_RG_Tlaxcala_T2_Acuna.txt
+          6_RG_Mexico_T1_Acuna.txt
+          7_RG_Mexico_T2_Acuna.txt
+          8_RG_Mexico_T3_Acuna.txt
+          9_RG_Michoacan_Acuna.txt
+          10_RG_Nueva Galicia_Acuna.txt
 
-README_DECM_MR_Corpus.txt
 
-4.Corpus description: This digital version of the RGs corpus contains only the historical information produced in the 16th century. All the comments and footnotes by René Acuña and Mercedes de la Garza have been removed to provide a clean version of the transcribed documents. This version of the corpus is now ready to be used for Text Mining, Machine Learning, Natural Language Processing, Corpus Lingüistics, and any other computational methodologies available for the study and exploration of historical textual sources. 
 
+2. Two volumes of the Relaciones Histórico-geográficas de la Gobernación de Yucatán edited by Mercedes de la Garza, which complement the work of Acuña:
+
+          11_RGs_Yucatan_T1_DeLaGarza.txt
+          12_RGs_Yucatan_T2_DeLaGarza.txt
+
+3. Volume 1 of the Papeles de la Nueva España. Segunda Serie Geográfica y Estadística (1905), edited by Francisco del Paso y Troncoso, which provides additional information about the 16th century geographies:
+
+          14_Suma_Visita_Pueblos_DelPasoYTroncoso.txt
+
+4. The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain consisting of 50 questions that had to be answered by the Spanish religious and political authorities located in the New Spain. The questionnaire is organised into four major topics: nature, morals and politics, military organisation and religious life and systems: 
+
+          RG_Instrucción.txt
+``` 

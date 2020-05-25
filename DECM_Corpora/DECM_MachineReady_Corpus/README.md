@@ -13,7 +13,8 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### How to cite this resource: 
 ``` 
 Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) 
-*DECM Machine Ready Corpus. T-AP Digging into Early Colonial Mexico Project.* DOI: 10.6084/m9.figshare.12048729
+DECM Machine Ready Corpus. T-AP Digging into Early Colonial Mexico Project. Figshare, Dataset.
+DOI: 10.6084/m9.figshare.12048729
 ```
 ### Corpus description: 
 This digital version of the RGs corpus contains only the historical information produced in the 16th century. All the comments and footnotes by René Acuña and Mercedes de la Garza have been removed to provide a clean version of the transcribed documents. This version of the corpus is now ready to be used for Text Mining, Machine Learning, Natural Language Processing, Corpus Lingüistics, and any other computational methodologies available for the study and exploration of historical textual sources. 

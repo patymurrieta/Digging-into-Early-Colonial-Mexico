@@ -24,3 +24,19 @@ These tables contain a tailored ontology for the annotation, automated search an
 1. DECM_Ontology.xls: This is a table with the ontology in Microsoft Excel format.
 2. DECM_Ontology.csv: This is a table with the ontology in Comma Delimited File format.
 ``` 
+### Copyright
+(2020) Patricia Murrieta-Flores, Diejo Jiménez-Badillo & Bruno Martins
+``` 
+Licensed under the Creative Commons Attribution-ShareAlike 4.0 International 
+(CC BY-SA 4.0) (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+   https://creativecommons.org/licenses/by-sa/4.0/
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+``` 

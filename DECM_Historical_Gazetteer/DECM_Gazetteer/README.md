@@ -32,7 +32,8 @@ been created from the indexes of the edited volumes of the Relaciones Geográfic
 published by Acuña, De la Garza, and the Suma de Visita de los Pueblos by Del Paso y Troncoso (see sources used) 
 disambiguated and atomized in a spatial database. Each shapefile include the following attributes: ID, Place name, 
 Alternative Names, Modern Name, References, Location, Confidence Degree, ID of a related location, Relationship shared, 
-Location Type, Type Thesaurus URL, Coord X, Coord Y, Time spam URL, Start date, End date. Every shapefile includes metadata.
+Location Type, Type Thesaurus URL, Coord X, Coord Y, Time spam URL, Start date, End date. Every shapefile includes 
+metadata.
 
 	Acuna_2_Antequera1.shp
         Acuna_3_Antequera2.shp
@@ -52,9 +53,9 @@ Location Type, Type Thesaurus URL, Coord X, Coord Y, Time spam URL, Start date, 
         Acuna_7_Mexico2_polygons.shp
         Acuna_8_Mexico3_polygons.shp
 
-2. DECM_Gazetteer_secondarysources: Contains 4 shapefiles (points and polygons) with historical information mentioned and 
-collected from 4 secondary sources. They have been created by digitising and disambiguating the places mentioned in the 
-sources (see sources used):
+2. DECM_Gazetteer_secondarysources: Contains 4 shapefiles (points and polygons) with historical information mentioned 
+and collected from 4 secondary sources. They have been created by digitising and disambiguating the places mentioned in 
+the sources (see sources used):
 
         MorenoToscano_i08.shp
         Gerhard_NewSpain.shp
@@ -159,14 +160,14 @@ Mexico in two formats: csv and xlsx
         Echenique_relaciones
 
 
-Documents:
+5. Documents:
 
-    DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
-    Relaciones Geográficas de Nueva España and Yucatán, places disambiguated with X and Y coordinates and without. 
+-DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
+Relaciones Geográficas de Nueva España and Yucatán, places disambiguated with X and Y coordinates and without. 
 
-    DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information, and DECM_Tables.
+-DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information, and DECM_Tables.
 
-    Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the place names in DECM_Gazetteer_primarysources folder.
+-Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the place names in the DECM_Gazetteer_primarysources folder.
 
 ``` 
 ### Copyright

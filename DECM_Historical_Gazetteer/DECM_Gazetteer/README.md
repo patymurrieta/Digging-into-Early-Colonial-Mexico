@@ -54,8 +54,8 @@ metadata.
         Acuna_8_Mexico3_polygons.shp
 
 2. DECM_Gazetteer_secondarysources: Contains 4 shapefiles (points and polygons) with historical information mentioned 
-and collected from 4 secondary sources. They have been created by digitising and disambiguating the places mentioned in 
-the sources (see sources used):
+and collected from 4 secondary sources. They have been created by digitising and disambiguating the places mentioned 
+in the sources (see sources used):
 
         MorenoToscano_i08.shp
         Gerhard_NewSpain.shp
@@ -162,14 +162,19 @@ Mexico in two formats: csv and xlsx
 
 5. Documents:
 
--DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
+a) DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
 Relaciones Geográficas de Nueva España and Yucatán, places disambiguated with X and Y coordinates and without. 
 
--DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information, and DECM_Tables.
+b) DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information, and DECM_Tables.
 
--Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the place names in the DECM_Gazetteer_primarysources folder.
+c) Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the place names in the DECM_Gazetteer_primarysources folder.
 
 ``` 
+### Sources Used:
+
+1. Primary Sources
+	1. Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+	
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
 ``` 

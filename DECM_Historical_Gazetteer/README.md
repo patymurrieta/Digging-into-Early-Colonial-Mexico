@@ -18,12 +18,12 @@ The gazetteer is composed of 71 files with geographic information of colonial pr
   Gazetteer Registry.
   
 2. The DECM 16th century Gazetteer:
-	This version constitutes a subset of the main DECM Gazetteer, including only the toponyms that were mentioned in 
-  the RG reports and the Suma de Visita de los Pueblos, providing a precise window into the period when these were 
-  recorded (1577-1585). 
-  This dataset contains: a) the toponyms with coordinates, mentioned and disambiguated for each 
-  RG volume; b) geographical layers of additional historical information derived from secondary sources; c) 32 tables 
-  with other important historical information related to the RGs; and d) the DECM Gazetteer Registry. 
+	This version constitutes a subset of the main DECM Historical Gazetteer, including only the toponyms that were 
+	mentioned in the RG reports and the Suma de Visita de los Pueblos, providing a precise window into the period 
+	when these were recorded (1548-1550/1577-1585). 
+	This dataset contains: the toponyms with coordinates, mentioned and disambiguated for each RG volume and the Suma; 
+	plus the 30 geographical layers and 32 tables as explained above, as well as the DECM Gazetteer Registry. 
+
 
 3. The DECM Gazetteer Registry:
 	This is a record for quick reference of all the files available in the Gazetteer.

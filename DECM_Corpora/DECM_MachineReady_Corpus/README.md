@@ -54,7 +54,7 @@ organisation and religious life and systems:
           RG_Instrucción.txt
 ``` 
 ### Copyright
-(2020) Patricia Murrieta-Flores
+(2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
 ``` 
 Licensed under the Creative Commons Attribution-ShareAlike 4.0 International 
 (CC BY-SA 4.0) (the "License");

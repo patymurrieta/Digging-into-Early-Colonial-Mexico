@@ -13,8 +13,8 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### How to cite this resource: 
 ``` 
 Murrieta-Flores, Patricia; Favila Vázquez, Mariana; Liceras-Garrido, Raquel;Bellamy, Katherine; Jiménez Badillo, Diego;
-Martins, Bruno Emanuel da Graça (2020): *DECM Ontology. T-AP Digging into Early Colonial Mexico Project*. figshare. Dataset. 
-https://doi.org/10.6084/m9.figshare.12058095.v2
+Martins, Bruno Emanuel da Graça (2020): DECM Ontology. T-AP Digging into Early Colonial Mexico Project. Figshare, Dataset.
+DOI: https://doi.org/10.6084/m9.figshare.12058095.v2
 ```
 ### Ontology Description: 
 These tables contain a tailored ontology for the annotation, automated search and mining of the texts of  of the Relaciones Geográficas de la Nueva España (1577-1585). The ontology aimed to cover the complexity of its concepts. This resulted in twenty-one entities, defined and linked to DBpedia, a semantic standard, to ensure the interoperability of our dataset. Most of the entities include labels (atributes) that are also defined and linked to DBpedia to enrich the semantic extraction process.

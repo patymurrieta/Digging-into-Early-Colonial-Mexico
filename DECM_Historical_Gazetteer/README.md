@@ -7,7 +7,7 @@ The gazetteer is composed of 71 files with geographic information of colonial pr
 
 ### Contents:
 ``` 
-1. The DECM Historical Gazetteer: 
+1. The DECM Gazetteer: 
 	This version includes all the researched historical toponyms contained in primary and secondary sources and it can 
   be provisionally consulted here: <link>. The information is organised by RG volume. It also includes layers and tables 
   of historical information digitised and/or created by the project from secondary sources. All is accompanied by 

@@ -14,7 +14,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ``` 
 Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) 
 DECM Historical Gazetteer. T-AP Digging into Early Colonial Mexico Project. Figshare, Dataset. 
-DOI:
+DOI: 10.6084/m9.figshare.12367385
 ```
 ### Gazetteer Description: 
 The DECM Historical Gazetteer is a digital gazetteer of historical places in Mexico available in different formats and built from detailed research. This includes a 16th century version (The DECM 16th Century Gazetteer) with the toponyms mentioned in primary sources including the Relaciones Geográficas (1577-1585) and the Suma de Visitas de los Pueblos de la Nueva España (1548-1550), as well as information on the political, religious and administrative units of the Viceroyalty of New Spain. The gazetteer is composed of 71 main files with geographic information of colonial provinces, alcaldias, corregimientos, diocesis, among many others, as well as thousands of historical cities, towns, villages, and other places. This is integrated in an interoperable model containing thousands of historical locations with alternative spelling place-name variations. The dataset also includes 30 tables with additional historical information related to toponyms, languages, repositories, maps, etc.

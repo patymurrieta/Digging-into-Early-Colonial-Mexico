@@ -22,7 +22,7 @@ The gazetteer is composed of 71 files with geographic information of colonial pr
 	mentioned in the RG reports and the Suma de Visita de los Pueblos, providing a precise window into the period 
 	when these were recorded (1548-1550/1577-1585). 
 	This dataset contains: the toponyms with coordinates, mentioned and disambiguated for each RG volume and the Suma; 
-	plus the 30 geographical layers and 32 tables as explained above, as well as the DECM Gazetteer Registry. 
+	plus, the 30 geographical layers and 32 tables as explained above, as well as the DECM Gazetteer Registry. 
 
 
 3. The DECM Gazetteer Registry:

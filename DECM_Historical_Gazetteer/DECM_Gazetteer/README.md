@@ -165,16 +165,88 @@ Mexico in two formats: csv and xlsx
 a) DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
 Relaciones Geográficas de Nueva España and Yucatán, places disambiguated with X and Y coordinates and without. 
 
-b) DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information, and DECM_Tables.
+b) DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes 
+included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information,
+and DECM_Tables.
 
-c) Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the place names in the DECM_Gazetteer_primarysources folder.
+c) Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the 
+place names in the DECM_Gazetteer_primarysources folder.
 
 ``` 
 ### Sources Used:
+``` 
+PRIMARY SOURCES
 
-1. Primary Sources
-	1. Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
-	
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: México. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo tercero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1987. Relaciones Geográficas del siglo XVI: Michoacán. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1988. Relaciones Geográficas del siglo XVI: Nueva Galicia. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: México. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo tercero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+De la Garza, Mercedes. 1983. Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco) Volumen 2: 441-448.
+Del Paso y Troncoso, Francisco. 1905. Papeles de la Nueva España publicados de orden y con fondos del Gobierno Mexicano. Tomo I. Suma de Visitas de Pueblos por Orden Alfabético. Madrid: Biblioteca Nacional de Madrid
+
+SECONDARY SOURCES
+
+Gerhard, Peter. 1972. A Guide to the Historical Geography of New Spain. 1 edition. Cambridge Eng.: Cambridge University Press. 
+Gerhard, Peter. 1979. The Southeast Frontier of New Spain. Princeton University Press. 
+Moreno Toscano, Alejandra (1968): Geografía económica de México (siglo XVI). Colegio de México. Appendix 4, p. 151-7. 
+
+ADDITIONAL INFORMATION 
+
+Arqueología Mexicana, 2018 'La Cuenca de México en 1519' [updated 2019: https://www.facebook.com/arqueomex/photos/a.350385424999742/2662751650429763/?type=3]
+Cline, Howard F. 1972 'Ethnohistorical Regions of Middle America' In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 63–137. University of Texas Press.
+Cline, Howard F. 1972 'Introductory Notes on Territorial Divisions of Middle America' In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 17-62. 
+De la Garza, Mercedes (1983): Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco) Volumen 2: 441-448.
+Gerhard, Peter. 1972a. A Guide to the Historical Geography of New Spain. 1 edition. Cambridge Eng.: Cambridge University Press.
+Gerhard, Peter, 1972b ‘Colonial New Spain 1519-1786: Historical Notes on the Evolution of Minor Political Jurisdctions’. In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 63–137. University of Texas Press. 
+Gerhard, Peter, 1979 'Map 5: The Southeast Frontier in 1786' in The Southeast Frontier of New Spain (Princeton University Press', p. 19 
+Instituto de Geografía, UNAM. 2007. "H_II_3 Pueblos Indigenas y Ciudades Prehispanicas en 1519", Atlas Nacional de México 
+Instituto de Geografía, UNAM. 2007. "Map H_II_2: Mapa Politico-Territorial de Mesoamerica hacia 1520", Atlas Nacional de México
+Instituto de Geografía, UNAM. 2007. "Map H_II_2: Mapa Politico-Territorial de Mesoamerica hacia 1520", Atlas Nacional de México 
+Instituto de Geografía, UNAM. 2007. 'Map A: 'Division Antigua (Provincias y Reinos) 1558-1776'; "H III 1 Mapa Politico Novohispano: Division Territorial, 1550-1813", Atlas Nacional de México 
+Instituto de Geografía, UNAM. 2007. 'Map B: 'Division en audiencias, siglo XVI-XVII'; "H III 1 Mapa Politico Novohispano: Division Territorial, 1550-1813", Atlas Nacional de México
+Instituto de Geografía, UNAM. 2007. 'Map C: 'División Eclesiástica (Obispados), 1519-1577'; "H III 1 Mapa Politico Novohispano: Division Territorial, 1550-1813", Atlas Nacional de México 
+Perlsetin Pollard, Hellen. 1994. 'Fig. 7.2 Sixteenth-century ethnic/linguistic boundaries. Based on Brand 1943)', 'Ethnicity and political control in a complex society: the Tarascan state of prehispanic Mexico' in Elizabeth M. Brumfiel (ed.) and John W. Fox, Factional competition and political development in the New World, (Cambridge University Press), pp. 89-102 (p. 81) 
+Vargas, 2015. 'Mapa 1: Provincias de Yucatán (Roys 1957)' in Ernesto Vargas, Itzamkanac y Acalan: Tiempos de crisis anticipando el futuro', (Instituto de Investigaciones Antropológicas, UNAM, 2015), p. 31.
+
+TABLES 
+
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Antequera. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: México. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo tercero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1987. Relaciones Geográficas del siglo XVI: Michoacán. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1988. Relaciones Geográficas del siglo XVI: Nueva Galicia. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1984. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1985. Relaciones Geográficas del siglo XVI: México. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
+Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo tercero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
+Cline, Howard F. 1964 'The Relaciones Geograficas of the Spanish Indies, 1577-1586' In The Hispanic American Historical Review, 44:3, 341-374. pp. 372-374; Cline, Howard F. 1972 'The Relaciones Geográficas of the Spanish Indies, 1577-1648' In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 183-242. University of Texas Press. pp. 185-188.
+Cline, Howard F. 1972 'Introductory Notes on Territorial Divisions of Middle America' In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 17-62. University of Texas Press. 
+De la Garza, Mercedes. 1983. Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco) Volumen 2.
+Del Paso y Troncoso, Francisco. 1905. Papeles de la Nueva España publicados de orden y con fondos del Gobierno Mexicano. Tomo I. Suma de Visitas de Pueblos por Orden Alfabético. Madrid: Biblioteca Nacional de Madrid. p. 1-16.
+Echenique March, Felipe I. 1992. Fuentes para el estudio de los pueblos de naturales de la Nueva España (Mexico: Instituto Nacional de Antropologia e Historia)
+García Cubas, Antonio, Diccionario geográfico, histórico y biográfico de los Estados Unidos Mexicanos, edición facsimilar, 5 t., estudio introductorio de Miguel León-Portilla, Aguascalientes, Instituto Nacional de Estadística y Geografía/El Colegio Nacional/Universidad Nacional Autónoma de México, Instituto de Investigaciones Históricas, 2015, ils. 
+Gerhard, Peter. 1972. A Guide to the Historical Geography of New Spain. 1 edition. Cambridge Eng.: Cambridge University Press. p. 445-476.
+Gerhard, Peter. 1979. The Southeast Frontier of New Spain. Princeton University Press. p. 197-213.
+Harvey, H.R. 1972. “The Relaciones Geográficas, 1979-1586: Native Languages.” In Handbook of Middle American Indians, Volume 12: Guide to Ethnohistorical Sources, Part One, edited by Howard F. Cline, 279–323. University of Texas Press.
+Moreno Toscano, Alejandra (1968): Geografía económica de México (siglo XVI). Colegio de México. Appendix 4, p. 151-7. 
+Starr, Frederick, Aztec Place-Names: Their Meaning and Mode of Composition, (Chicago, 1920) pp. 4-16.
+
+``` 	
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
 ``` 

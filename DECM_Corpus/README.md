@@ -7,16 +7,31 @@ The DECM Corpus is a digital corpus of the texts of Relaciones Geográficas with
 ### Contents:
 ``` 
 1. The DECM Machine Ready Corpus: 
-	This version includes text only files (.txt) containing each of the 10 volumes originally edited by Rene Acuña, the 2 volumes edited by Mercedes de la Garza, the Suma de Visita edited by Del Paso y Troncoso, a file with the original text of the Crown mandate (Instrucción), and metadata for this collection. This version contains only the original text of each of the RGs as transcribed by the scholars, excluding any editorial note, commentary, or historical work. This can be therefore used directly for corpus linguistics analyses, visualisations, etc.
+	This version includes text only files (.txt) containing each of the 10 volumes originally edited by 
+	Rene Acuña, the 2 volumes edited by Mercedes de la Garza, the Suma de Visita edited by Del Paso y 
+	Troncoso, a file with the original text of the Crown mandate (Instrucción), and metadata for this 
+	collection. This version contains only the original text of each of the RGs as transcribed by the 
+	scholars, excluding any editorial note, commentary, or historical work. This can be therefore used 
+	directly for corpus linguistics analyses, visualisations, etc.
 
 2. The DECM Gold Standard Corpus: 
-	This version contains a sample of the RGs manually annotated by multiple researchers with the software of our industry partner, Tagtog. This corpus has been used to carry out the NLP and ML experiments and the files are available in JSON and TSV format. These files are composed by texts and annotations. This is also accompanied by the DECM ontology which provides an explanation of the entities and labels produced. This corpus can be used for further experimentation with Artificial Intelligence methods.
+	This version contains a sample of the RGs manually annotated by multiple researchers with the 
+	software of our industry partner, Tagtog. This corpus has been used to carry out the NLP and ML 
+	experiments and the files are available in JSON and TSV format. These files are composed by texts 
+	and annotations. This is also accompanied by the DECM ontology which provides an explanation of the 
+	entities and labels produced. This corpus can be used for further experimentation with Artificial 
+	Intelligence methods.
 
 3. The DECM Machine Annotated Corpus: 
-	This is the version of the entire RG corpus automatically annotated using the ML models trained with the DECM Gold Standard Corpus. The files are available in JSON and TSV format, and it also contains the file for the DECM Ontology. This corpus can be further used for quantitative and qualitative research, as well as advanced analyses using text mining techniques, corpus linguistics and other methods such as Geographical Text Analysis. 
+	This is the version of the entire RG corpus automatically annotated using the ML models trained with
+	the DECM Gold Standard Corpus. The files are available in JSON and TSV format, and it also contains
+	the file for the DECM Ontology. This corpus can be further used for quantitative and qualitative 
+	research, as well as advanced analyses using text mining techniques, corpus linguistics and other 
+	methods such as Geographical Text Analysis. 
 
 4. The DECM Ontology:
-This is the ontology used to annotate the corpus of the RGs. It is constituted by 21 entities and labels marking important social, politic, territorial and economic information. This is available in Excel format. 
+This is the ontology used to annotate the corpus of the RGs. It is constituted by 21 entities and labels 
+marking important social, politic, territorial and economic information. This is available in Excel format. 
 
 ``` 
 

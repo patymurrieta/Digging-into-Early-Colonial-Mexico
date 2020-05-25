@@ -1,4 +1,4 @@
-# DECM_Golden_Standard_Corpus -COMING IN 2021!
+# DECM_Gold_Standard_Corpus -COMING IN 2021!
 
 ## Project information: 
 The Digging into Early Colonial Mexico: A large-scale computational analysis of 16th century historical sources project uses part of the corpus known as Relaciones Geográficas de la Nueva España – one of the most important colonial historical sources of America – concerned with the territory of Mexico, to create and develop novel computational approaches for the semi-automated exploration of thousands of pages contained in these 16th century documents.
@@ -13,7 +13,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### How to cite this resource: 
 ``` 
 Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., and Liceras-Garrido, R. (2020) 
-*DECM Golden Standard Corpus. T-AP Digging into Early Colonial Mexico Project.* DOI: 
+*DECM Gold Standard Corpus. T-AP Digging into Early Colonial Mexico Project.* DOI: 
 ```
 ### Corpus description: 
 This digital version of the RGs corpus contains only the historical information produced in the 16th century. All the comments and footnotes by René Acuña and Mercedes de la Garza have been removed to provide a clean version of the transcribed documents. This version of the corpus is now ready to be used for Text Mining, Machine Learning, Natural Language Processing, Corpus Lingüistics, and any other computational methodologies available for the study and exploration of historical textual sources. 

@@ -1,4 +1,4 @@
-# DECM_MachineReady_Corpus
+# DECM_Ontology
 
 ## Project information: 
 The Digging into Early Colonial Mexico: A large-scale computational analysis of 16th century historical sources project uses part of the corpus known as Relaciones Geográficas de la Nueva España – one of the most important colonial historical sources of America – concerned with the territory of Mexico, to create and develop novel computational approaches for the semi-automated exploration of thousands of pages contained in these 16th century documents.

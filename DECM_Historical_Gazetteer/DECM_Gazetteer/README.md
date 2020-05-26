@@ -162,14 +162,15 @@ Mexico in two formats: csv and xlsx
 
 5. Documents:
 
-a) DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of place names included in the 
-Relaciones Geográficas de Nueva España and Yucatán, places disambiguated with X and Y coordinates and without. 
+a) DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of toponyms included 
+in the primary and secondary sources used, the number and percentage of places disambiguated where X and Y coordinates 
+were assigned or not found. 
 
-b) DECM_Gazetteer_Registry.xlsx: Excel file with a list of all the information of sources and attibutes 
+b) DECM_Gazetteer_Registry.xlsx & CSV: Excel and CSV files with a list of all the information of sources and attibutes 
 included in DECM_Gazetteer_primarysources, DECM_Gazetteer_secondarysources, DECM_Additional_Information,
 and DECM_Tables.
 
-c) Souces_for_the_Disambiguation - Word file with the bibliographical references used to locate the 
+c) Souces_for_the_Disambiguation - Text file with the bibliographical references used to locate the 
 place names in the DECM_Gazetteer_primarysources folder.
 
 ``` 

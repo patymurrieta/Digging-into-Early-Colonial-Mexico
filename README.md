@@ -19,7 +19,7 @@ The project has created multiple outputs that you will find in this repository. 
 4. **The DECM Sixteenth century Gazetteer**: In addition to the general colonial gazetteer, we created a 16th century version with the places mentioned in primary sources including the Relaciones Geográficas (1577-1585) and the Suma de Visitas de los Pueblos de la Nueva España (1548-1550), as well as information on the political, religious and administrative units of the Viceroyalty of New Spain. This is integrated in an interoperable model containing thousands of historical locations with alternative spelling place-name variations. The dataset also includes 40 tables with additional historical information related to toponyms, languages, repositories, maps, etc.
 5. **The Subaltern Recogito Dataset**: A digital annotated version of the maps included in the RGs
 6. **The Subaltern Recogito Ontology**: A tailored ontology for the annotation and mining of information from 16th century Mexican maps. 
-7. **Mesoamerican Pathways**: A public engagement online resource called .
+7. **Mesoamerican Pathways**: A public engagement online storymap resource.
 8. **Geographical Text Analysis**: developed by the project to carry out spatial queries from annotated texts and an accompanying gazetteer.
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins

@@ -43,7 +43,7 @@ Tackling important historical and methodological questions, and highly demanding
 Our highly interdisciplinary team is combining techniques from different disciplines, including Corpus Linguistics, Text Mining, Natural Language Processing, Machine Learning, and Geographic Information Systems, to address questions related to the recording of information about indigenous cultures, the Spanish exploration of indigenous social and religious concepts, the appropriation and ideas about place and space in the indigenous world, and their attitudes towards politics and economy. 
 
 ### Link to the webpage of the project: 
-[https://www.lancaster.ac.uk/digging-ecm/]
+https://www.lancaster.ac.uk/digging-ecm/
 
 ### How to cite this resource: 
 Each of the versions has its own DOI, please see the README file for a full citation of the version you are interested on.

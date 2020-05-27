@@ -22,7 +22,7 @@ This digital version of the RGs corpus contains only the historical information 
 ### Content: 
 ``` 
 1. DECM_Gold_Standard_Corpus.JSON and .TVS: This corpus contains a sample of the RGs manually annotated by 
-multiple researchers with the software of our industry partner, [Tagotog](http://tagtog.net). This corpus has 
+multiple researchers with the software of our industry partner, Tagotog (http://tagtog.net). This corpus has 
 been used to carry out the NLP and ML experiments and the files are available in JSON & TSV format. These files 
 are composed by texts and annotations. This is also accompanied by the DECM ontology which provides an explanation 
 of the entities and labels produced. This corpus can be used for further experimentation with Artificial 

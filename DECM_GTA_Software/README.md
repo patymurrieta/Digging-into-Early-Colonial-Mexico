@@ -2,7 +2,7 @@
 # The DECM Geographical Text Analysis Software -COMING IN 2021!
 
 ## What you will find here
-The GTA software is being developed in collaboration with the [National Centre of High Performance Computing in Mexico] (http://www.cns-ipicyt.mx/youilab) at the moment. Its aim is to carry out spatial queries from annotated texts and an accompanying gazetteer.
+The GTA software is being developed in collaboration with the [National Centre of High Performance Computing in Mexico](http://www.cns-ipicyt.mx/youilab) at the moment. Its aim is to carry out spatial queries from annotated texts and an accompanying gazetteer.
 
 You will find here also detailed documentation on its use and related publications.
 

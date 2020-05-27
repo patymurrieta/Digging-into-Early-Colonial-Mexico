@@ -21,20 +21,3 @@ The project has created multiple outputs that you will find in this repository. 
 6. **The Subaltern Recogito Ontology**: A tailored ontology for the annotation and mining of information from 16th century Mexican maps. 
 7. **Mesoamerican Pathways**: A public engagement online storymap resource.
 8. **Geographical Text Analysis**: developed by the project to carry out spatial queries from annotated texts and an accompanying gazetteer.
-### Copyright
-(2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
-``` 
-Licensed under the Creative Commons Attribution-ShareAlike 4.0 International 
-(CC BY-SA 4.0) (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-   https://creativecommons.org/licenses/by-sa/4.0/
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
-``` 
-

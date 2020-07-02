@@ -1,0 +1,23 @@
+;Entity;Ontological definition;Further notes on definition;Example
+1;Person (labels: female/male);http://dbpedia.org/page/Person;https://en.oxforddictionaries.com/definition/person;
+2;"Location (with labels for: Geographic feature type; Toponyms)";http://dbpedia.org/ontology/location;https://en.oxforddictionaries.com/definition/location;
+3;"Animals (with labels for: insect, mammal, reptile, bird, amphibian; domesticated animal)";http://dbpedia.org/ontology/animal;https://en.oxforddictionaries.com/definition/animal;
+4;Activity (with labels for: agriculture, warfare, economy);http://dbpedia.org/ontology/activity;https://en.oxforddictionaries.com/definition/activity;
+5;Plant (labels for: tree, cactus, flower, crop?);http://dbpedia.org/page/Plant;https://en.oxforddictionaries.com/definition/plant;
+6;Architecture (with labels for: religious, civil, domestic, hidraulic, military);http://dbpedia.org/page/Architecture;https://en.oxforddictionaries.com/definition/architecture;
+7;RouteOfTransportation (with labels for terrestrial, aquatic, vehicle);http://dbpedia.org/ontology/RouteOfTransportation;;
+8;Role (with labels for profession, title);http://dbpedia.org/page/Role;https://en.oxforddictionaries.com/definition/role;
+9;Glosses, Languages (with labels for: toponyms, descriptions, name, date, rubric, abbreviation);;https://www.oed.com/view/Entry/79130?rskey=to5iJ0&result=1#eid;
+10;Numeral (with labels for: date, quantity);http://dbpedia.org/page/Number;;
+11;Water body (with labels for: river, lake, lagoon, spring, sea);http://dbpedia.org/page/Body_of_water;https://www.oed.com/view/Entry/226109?redirectedFrom=water+body#eid15034449;
+12;Astronomical object (with labels for: sun, moon, star?);http://dbpedia.org/page/Astronomical_object;;
+13;Cartographic symbol (with labels for: scale, orientation);http://dbpedia.org/page/Symbol;;
+14;Transportation (with labels for: aquatic vehicle and terrestrial vehicle);http://dbpedia.org/page/Transport;https://en.oxforddictionaries.com/definition/transportation;
+15;Pictographic_Tradition (with labels for: European, Mixed, Native);http://dbpedia.org/page/Pictogram;;
+16;Colour (with labels for: red, orange, green blue, yellow, brown, etc.);http://dbpedia.org/page/Color;;
+17;Material (with labels for: Native paper, European paper, textile, estuco, unknow);http://dbpedia.org/page/Material;;
+18;Urban plan (with labels for: grid, cluster, disperse);http://dbpedia.org/page/Urban_planning;;
+19;Genealogy (with labels for: marriage);http://dbpedia.org/page/Genealogy;;
+20;Scale (with labels for: local/regional);http://dbpedia.org/page/Scale;;
+21;Uncertain;;;
+

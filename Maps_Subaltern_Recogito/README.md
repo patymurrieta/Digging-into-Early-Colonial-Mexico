@@ -1,32 +1,15 @@
 ![alt text](https://www.lancaster.ac.uk/digging-ecm/wp-content/uploads/2018/04/Logo-sticky-header-345.png  "Digging into Early Colonial Mexico Logo")
-# The DECM Historical Gazetteer
+# The Subaltern Recogito Project
 
 ## What you will find here
-The DECM Historical Gazetteer is a digital gazetteer of historical places in Mexico available in different formats and built from detailed research. This includes a 16th century version (*The DECM 16th Century Gazetteer*) with the toponyms mentioned in primary sources including the Relaciones Geográficas (1577-1585) and the Suma de Visitas de los Pueblos de la Nueva España (1548-1550), as well as information on the political, religious and administrative units of the Viceroyalty of New Spain. 
-The gazetteer is composed of 71 files with geographic information of colonial provinces, alcaldias, corregimientos, diocesis, among many others, as well as thousands of historical cities, towns, villages, and other places. This is integrated in an interoperable model containing thousands of historical locations with alternative spelling place-name variations. The dataset also includes 40 tables with additional historical information related to toponyms, languages, repositories, maps, etc.
+The Subaltern Recogito Project was developed with a Pelagios Commons Resource Development Grant to explore the annotation of a series of historic maps using Recogito. Our corpus of maps includes those produced in the sixteenth-century for the Relaciones Geográficas de Nueva España across the area which is currently Mexico. The project took place in collaboration with our colleagues in the LLILAS Benson Latin American Studies and Collections at The University of Texas at Austin, the National School of Anthropology and History (ENAH), The National Autonomous University of Mexico (UNAM), the National Institute of Anthropology and History (INAH), and the University of Lisbon. We delivered an online workshop and trained participants on Recogito for the annotation of the sixteenth-century maps of the Relaciones Geográficas.
+
+Twenty-seven scholars from UNAM and ENAH participated and Patricia Murrieta-Flores provided an introduction to the Spatial Humanities and the use of these technologies. From this, the project evolved into a citizen science project, where the participants met online every week to take part in ‘mappathons’, completing the annotation a set of sixteenth-century maps now available in the Benson collection.
 
 ### Contents:
 ``` 
-1. The DECM Gazetteer: 
-	This version includes all the researched historical toponyms contained in primary and secondary sources and it can 
-  be provisionally consulted here: <link>. The information is organised by RG volume. It also includes layers and tables 
-  of historical information digitised and/or created by the project from secondary sources. All is accompanied by 
-  metadata, including the DECM Gazetteer Registry. 
-  This set is composed by: a) all toponyms with coordinates, mentioned and disambiguated from the edited collections 
-  of the RGs and from secondary sources; b) 30 geographical layers of additional historical information derived from 
-  secondary sources; c) 32 tables with other important historical information related to the RGs; and d) the DECM 
-  Gazetteer Registry.
-  
-2. The DECM 16th century Gazetteer:
-	This version constitutes a subset of the main DECM Historical Gazetteer, including only the toponyms that were 
-	mentioned in the RG reports and the Suma de Visita de los Pueblos, providing a precise window into the period 
-	when these were recorded (1548-1550/1577-1585). 
-	This dataset contains: the toponyms with coordinates, mentioned and disambiguated for each RG volume and the Suma; 
-	plus, the 30 geographical layers and 32 tables as explained above, as well as the DECM Gazetteer Registry. 
-
-
-3. The DECM Gazetteer Registry:
-	This is a record for quick reference of all the files available in the Gazetteer.
+1. The Subaltern Recogito Ontology: A tailored ontology for the annotation and mining of information from 16th century Mexican maps. 
+2. The Subaltern Recogito Dataset: The dataset with annotations to be used with Recogito.
 
 ``` 
 
@@ -40,8 +23,10 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### Link to the webpage of the project: 
 https://www.lancaster.ac.uk/digging-ecm/
 
-### How to cite this resource: 
-Each of the versions has its own DOI, please see the README file for a full citation of the version you are interested on.
+### How to cite these resources: 
+DATASET: Murrieta Flores, Patricia; Favila Vázquez, Mariana; Bellamy, Katherine; Jiménez-Badillo, Diego; Martins, Bruno; López Camacho, Javier; McDonough, Kelly; Palacios, Albert A., 2019a. "Pelagios Commons: Subaltern Recogito Project", https://doi.org/10.18738/T8/L2SJQT, Texas Data Repository Dataverse, V2.
+
+ONTOLOGY: Murrieta-Flores, P.; Favila-Vázquez, M.; Bellamy, K.; Jiménez-Badillo, D.; Martins, B.; López-Camacho, J.; McDonough, K. & Palacios, A. 2020a. Subaltern Recogito Ontology. figshare. Dataset. https://doi.org/10.6084/m9.figshare.12063180.v2 
 
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins

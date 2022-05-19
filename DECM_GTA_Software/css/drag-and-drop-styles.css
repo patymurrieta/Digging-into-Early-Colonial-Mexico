@@ -1,0 +1,238 @@
+.drag-and-drop {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.drag-and-drop>* {
+    display: block;
+    box-sizing: border-box;
+}
+
+.drag-and-drop>input {
+    height: 120px;
+    opacity: 0;
+    width: 100%;
+}
+
+.drag-and-drop>.dad-mask {
+    align-items: center;
+    background-color: white;
+    border-radius: 11px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.8em;
+    justify-content: center;
+    left: 0;
+    padding: 20px 10px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 100%;
+}
+
+.drag-and-drop>.dad-mask.active {
+    background-color: #f8f9fa;
+    border: 2px dashed #dee2e6;
+}
+
+p>i {
+    font-size: 2em;
+}
+
+#loaded-files {
+    background-color: #f8f9fa;
+    height: 100px;
+    overflow-y: scroll;
+    padding: 5px 5px;
+    width: 100%;
+    border: 2px dashed #dee2e6;
+    border-radius: 5px;
+}
+
+#loaded-files-list {
+    background-color: white;
+    height: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100%;
+}
+
+div.file.card {
+    background-color: white;
+    border-radius: 0px;
+
+    margin: 0 5px 10px;
+    padding: 12px 12px;
+    position: relative;
+    width: 100%;
+}
+
+div.file.card>p {
+    font-size: .5em;
+    margin-bottom: 0px;
+    color: #4b4b4b;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+div.file.card>span {
+    font-size: .6em;
+    padding: 6px 6px;
+    background-color: white;
+    color: gray;
+    border-radius: 50px;
+}
+
+div.file.card>button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50px;
+    cursor: pointer;
+    text-align: center;
+    padding: 7px;
+    line-height: 0;
+}
+button>i.fa{
+    font-size: .5em;
+}
+
+.relation-item{
+    color: #545b63 !important;
+    float: left !important;
+    width: 100% !important;
+    font-family: Verdana, Geneva, sans-serif !important;
+    font-size: 10pt !important;
+    text-overflow: ellipsis!important;
+    border-collapse: collapse;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.relation-item:hover{
+    text-overflow: initial;
+    border-collapse: initial;
+    white-space: normal;
+}
+
+.relation-item-code{
+    color: #969699 !important;
+    float: initial !important;
+    width: 100% !important;
+    font-family: Verdana, Geneva, sans-serif !important;
+    font-size: 8pt !important;
+    font-weight: normal;
+
+}
+
+.success-file{
+    color: #0ab650 !important;
+}
+
+.failed-file{
+    color: #ff3547!important;
+}
+
+.box-progress{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    padding: 0px;
+    margin: 0px;
+   /* box-shadow: 0 30px 60px rgba(0,0,0,.2);*/
+}
+
+.box-progress .percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box-progress .percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box-progress .percent svg circle{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    fill: none;
+    stroke-width: 10;
+    stroke: #000;
+    transform: translate(5px,5px);
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke-linecap: round;
+
+}
+.box-progress .percent svg circle:nth-child(1){
+    stroke-dashoffset: 0;
+    stroke: #f3f3f3;
+}
+
+.box-progress .percent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440 - (440 * 0) / 100);
+    stroke: #03a9f4;
+
+}
+
+.box-progress .percent .number{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    margin: 0!important;
+    justify-content: center;
+    align-items: center;
+    color: #999;
+}
+
+.box-progress .percent .number h2{
+    font-size: 48px;
+    margin: 0px;
+    font-weight: 400;
+}
+
+.box-progress .percent .number span{
+    font-size: 24px;
+}
+
+.box-progress .text{
+    padding: 10px 0 0;
+    color: #999;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.box-progress .relationprogress{
+    padding: 10px;
+    color: #0789c4;
+    font-size: 10px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    text-overflow: ellipsis!important;
+    border-collapse: collapse;
+    white-space: nowrap;
+    overflow: hidden;
+}

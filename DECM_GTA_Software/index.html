@@ -62,6 +62,61 @@
 <body>
 
 <!-- Modal -->
+
+<div class="modal  fade" id="modal-annotations-file" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Annotations Legend File</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+       
+        
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-relations-files" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Relations Files</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+       
+        
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
 
@@ -193,6 +248,8 @@
 
   </div>
 </div>
+
+
 
 <div class="modal fade" id="modalExportCoincidences" role="dialog">
   <div class="modal-dialog">
@@ -440,7 +497,7 @@
 
 <section id="corpus-loader" class=" container-fluid full-size-index">
   <section class="view " style="height: 100%;">
-    <img src="img/GTA2.png" class="img-fluid">
+    <img src="img/gta.png" class="img-fluid gta-img-background">
     <div class="mask container-fluid" style="height: 100%; padding: 0px; margin: 0px;">
 
 
@@ -448,6 +505,16 @@
         <div class="col-md-8">
           <div class="row">
             <h3 class="h3-responsive title-index-tool">Geographical Text Analysis </h3>
+          </div>
+          <div class="row">
+            <div class="logos-gta">
+              <img src="img/inah-logo.png" class="img-fluid">
+              <img src="img/Lancaster_logo.png" class="ml-3 img-fluid">
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/patymurrieta/Digging-into-Early-Colonial-Mexico/tree/master/DECM_GTA_Software#" target="_blank"><i class="fab fa-github  color-gray"> GitHub</i></a>
+            </div>
           </div>
         </div>
         <div class="col-md-4 p-3 d-flex justify-content-center align-items-center justify-content-center"
@@ -478,14 +545,14 @@
                 <div class="col-sm-8">
                   <div class="row mx-0">
                     <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Annotations Legend File  </p>
-                    <i class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  " ></i>
+                    <i  data-toggle="modal" data-target="#modal-annotations-file"  class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  " ></i>
                   </div>
                 </div>
 
 
                 <div class="col-sm-4  d-flex justify-content-center align-items-center">
                   <p id="lbl-legend-file-status" class="pl-3 py-1 pr-1 m-0 failed-file" style=" font-size: 14px;  font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Empty</p>
-                  <i id="btn-delete-legend-file" onclick="removeInputFile('annotations-legend')" class="fas fa-trash-alt ml-1" style="color: #cfcfd2; display: none;"></i>
+                  <i  id="btn-delete-legend-file" onclick="removeInputFile('annotations-legend')" class="fas fa-trash-alt ml-1" style="color: #cfcfd2; display: none;"></i>
                 </div>
               </div>
 
@@ -496,7 +563,7 @@
                 <div class="col-sm-8">
                   <div class="row mx-0">
                     <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Relations Loaded</p>
-                    <i class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  "></i>
+                    <i data-toggle="modal" data-target="#modal-relations-files"  class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  "></i>
                   </div>
                 </div>
 
@@ -516,16 +583,9 @@
 
             </div>
 
-            <div id="button-section-dd" class="wrapper px-2" style="width: 100%; display: flex; align-items: center;">
-              <button id="corpus-loader-trigger" class="corpus-button-loader" style="display: inline;">Process corpus</button>
+            <div id="button-section-dd" class="wrapper px-2 gta-button-start" >
+              <button id="corpus-loader-trigger" class="corpus-button-loader">Process corpus</button>
             </div>
-
-
-
-
-
-
-
           </div>
 
 
@@ -616,7 +676,7 @@
     <div id="containerDashboard" class="container-fluid col-md-10 m-0 p-0" style="background-color: transparent; height: 100%;">
 
       <div id="containerTitle" class="row wrapper" style="background-color: transparent">
-        <h2 class="h2-responsive title-text-tool align-content-center align-items-center justify-content-center">Geographical Text Analysis <a href="https://github.com/patymurrieta/Digging-into-Early-Colonial-Mexico/tree/master/DECM_GTA_Software#" target="_blank"><i class="fab fa-github fa-xs color-gray"></i></a></h2>
+        <h2 class="h2-responsive title-text-tool align-content-center align-items-center justify-content-center">Geographical Text Analysis</h2>
       </div>
       <div id="containerTools" class="row wrapper" style="background-color: transparent; height: 90%;" >
         <div class="container-fluid" style="height: 100%;">

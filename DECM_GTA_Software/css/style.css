@@ -1012,13 +1012,25 @@ ul{
   padding: 10px;
 
 }
+
+.gta-button-start{
+  position: absolute;
+  bottom: 30px;
+  width: 100%; 
+  align-items: center;
+  margin-right: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .corpus-button-loader {
   height: 40px;
-  width: 100%;
-  margin: 0px;
+  width: 60%;
+  margin-right: 20px;
   background-color: #03a9f4;
   border-radius: 10px;
   border: none;
+  display: none;
   color: white;
 }
 
@@ -1171,7 +1183,7 @@ p > span {
 
 
 .customers tr:nth-child(even){
-  background-color: #f7f7fc;!important;
+  background-color: #f7f7fc!important;
 }
 
 .sorting_asc{
@@ -1682,3 +1694,35 @@ table td {
   font-size: 12px;
   font-weight: 200;
 }
+
+.logos-gta{
+  background-color: white;
+  border-radius: 5px;
+  height: 70px;
+  margin: 10px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+}
+.social-links{
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gta-img-background{
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+

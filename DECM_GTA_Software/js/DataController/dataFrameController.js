@@ -307,6 +307,34 @@ function getAnnotations() {
   return central;
 }
 
+function getRightToponym(index, paragraph, relation)
+{
+    return central.filter(function (annotation){
+       bnd = false;
+
+       if ($.inArray("toponym", annotation.classId.labels) === 0)
+       {
+           if(annotation.relation === relation && annotation.paragraph === paragraph && annotation.index > index)
+               bnd = true
+       }
+       return bnd;
+    });
+}
+
+function getLeftToponym(index, paragraph, relation)
+{
+    return central.filter(function (annotation){
+        bnd = false;
+
+        if ($.inArray("toponym", annotation.classId.labels) === 0)
+        {
+            if(annotation.relation === relation && annotation.paragraph === paragraph && annotation.index < index)
+                bnd = true
+        }
+        return bnd;
+    });
+}
+
 function getAnnotationsByEndIndex(keyDocument,paragraph,startIndex, endindex){
     let result =[];
     let annotationsSameEndIndex = central.filter(function (annotation){
@@ -478,42 +506,73 @@ function addAnnotationToExport(annotation,type){
     var paragraphText = getTextOfHtml(annotation["key"],annotation["paragraph"]);
  var objectCSVToExport ={};
  var objectJSONToExport= {};
- console.log("exportar en "+type);
     if(type.includes("csv")) {
         objectCSVToExport = {
-            relation: annotation.relation,
+            document: annotation.relation,
             index: annotation.index,
             entityCode: annotation.classId.value,
             entity: annotation.classId.entity,
             labels: annotation.classId.labels,
             paragraph: annotation.paragraph,
             leftContext: getLeftContext(paragraphText.substring(0, annotation.index)),
-            text: annotation.label,
+            KWC: annotation.label,
             rightContext: getRightContext(paragraphText.substring(annotation.index + annotation.label.length, paragraphText.length))
         };
-        getReferencesByToponym(annotation.relation,annotation.label, annotation.classId.labels).forEach(function (reference,index){
-            objectCSVToExport["REF"+(index+1)+"_PLACE"] = reference.keyWords;
-            objectCSVToExport["REF"+(index+1)+"_LAT"] = reference.latitude;
-            objectCSVToExport["REF"+(index+1)+"_LNG"] = reference.longitude;
-            objectCSVToExport["REF"+(index+1)+"_BIBLIO"] = reference.author+", "+ reference.reference+ ", Vol: "+ reference.volumen + ", Tome: "+ reference.tome+ ", Pages:"+reference.pages;
+
+        var rightReference = getRightReferenceInGazetteer(annotation);
+
+        getReferencesByDocumentTitle(annotation.relation).forEach(function (reference,index){
+            objectCSVToExport["REF"+(index+1)+"_DOC_PLACE"] = reference.keyWords;
+            objectCSVToExport["REF"+(index+1)+"_DOC_LAT"] = reference.latitude;
+            objectCSVToExport["REF"+(index+1)+"_DOC_LNG"] = reference.longitude;
+            objectCSVToExport["REF"+(index+1)+"_DOC_BIBLIO"] = reference.author+", "+ reference.reference+ ", Vol: "+ reference.volumen + ", Tome: "+ reference.tome+ ", Pages:"+reference.pages;
 
         });
+
+        var leftReference = getLeftReferenceInGazetteer(annotation);
+        if(leftReference!== null) {
+            objectCSVToExport["REF_KWC_Left_PLACE"] = leftReference.keyWords;
+            objectCSVToExport["REF_KWC_Left_LAT"] = leftReference.latitude;
+            objectCSVToExport["REF_KWC_Left_LNG"] = leftReference.longitude;
+            objectCSVToExport["REF_KWC_Left_BIBLIO"] = leftReference.author + ", " + leftReference.reference + ", Vol: " + leftReference.volumen + ", Tome: " + leftReference.tome + ", Pages:" + leftReference.pages;
+        }
+
+        var rightReference = getRightReferenceInGazetteer(annotation);
+        if(rightReference!== null) {
+            objectCSVToExport["REF_KWC_Right_PLACE"] = rightReference.keyWords;
+            objectCSVToExport["REF_KWC_Right_LAT"] = rightReference.latitude;
+            objectCSVToExport["REF_KWC_Right_LNG"] = rightReference.longitude;
+            objectCSVToExport["REF_KWC_Right_BIBLIO"] = rightReference.author + ", " + rightReference.reference + ", Vol: " + rightReference.volumen + ", Tome: " + rightReference.tome + ", Pages:" + rightReference.pages;
+        }
+
+        getReferencesByToponym(annotation.relation,annotation.label, annotation.classId.labels).forEach(function (reference,index){
+            objectCSVToExport["REF"+(index+1)+"_Toponym_PLACE"] = reference.keyWords;
+            objectCSVToExport["REF"+(index+1)+"_Toponym_LAT"] = reference.latitude;
+            objectCSVToExport["REF"+(index+1)+"_Toponym_LNG"] = reference.longitude;
+            objectCSVToExport["REF"+(index+1)+"_Toponym_BIBLIO"] = reference.author+", "+ reference.reference+ ", Vol: "+ reference.volumen + ", Tome: "+ reference.tome+ ", Pages:"+reference.pages;
+
+        });
+
+       
         annotationsToExport.push(objectCSVToExport);
     }else {
         objectJSONToExport = {
-            relation: annotation.relation,
+            document: annotation.relation,
             index: annotation.index,
             entityCode: annotation.classId.value,
             entity: annotation.classId.entity,
             labels: annotation.classId.labels,
             paragraph: annotation.paragraph,
             leftContext: getLeftContext(paragraphText.substring(0,annotation.index)),
-            text: annotation.label,
+            KWC: annotation.label,
             rightContext: getRightContext(paragraphText.substring(annotation.index+annotation.label.length,paragraphText.length)),
             references: getReferencesByToponym(annotation.relation,annotation.label, annotation.classId.labels)
         };
         annotationsToExport.push(objectJSONToExport);
     }
+}
+function setReferenceToDocument(){
+
 }
 
 function getReferencesByToponym(relation,toponymToSearch,labels){
@@ -522,18 +581,59 @@ function getReferencesByToponym(relation,toponymToSearch,labels){
     if($.inArray("toponym", labels) === 0){
 
         referencesLocated = getReferencesByToponymName(toponymToSearch);
-    }else{
-        var toponymTitle = null;
-        if(!labels.includes("toponym")){
-            toponymTitle = searchAToponymInTitle(relation);
-
-            if(toponymTitle!==null) {
-                referencesLocated = getReferencesByToponymName(toponymTitle);
-            }
-        }
     }
 
     return referencesLocated;
+}
+
+function getReferencesByDocumentTitle(relation)
+{
+    var referencesLocated=[];
+
+    var toponymTitle = searchAToponymInTitle(relation);
+
+    if(toponymTitle!==null) {
+        referencesLocated = getReferencesByToponymName(toponymTitle);
+    }
+
+    return referencesLocated;
+}
+
+
+function getRightReferenceInGazetteer(annotation){
+    var rightToponyms = getRightToponym(annotation.index, annotation.paragraph, annotation.relation);
+    var rightReference= null;
+
+    for (var j = 0; j < rightToponyms.length; j++){
+        var toponym = rightToponyms[j];
+        var references =getReferencesByToponymName(toponym.label);
+
+         if(references.length > 0) {
+             rightReference = references[0];
+             break;
+         }
+     }
+
+     return rightReference;
+
+}
+
+function getLeftReferenceInGazetteer(annotation){
+    var toponyms = getLeftToponym(annotation.index, annotation.paragraph, annotation.relation);
+    var reference= null;
+
+    for (var j = toponyms.length-1; j >= 0; j--){
+        var toponym = toponyms[j];
+        var references =getReferencesByToponymName(toponym.label);
+
+        if(references.length > 0) {
+            reference = references[0];
+            break;
+        }
+    }
+
+    return reference;
+
 }
 
 function getReferencesByToponymName(toponymToSearch){

@@ -380,6 +380,8 @@ display: flex;
   margin: 0;
 }
 
+
+
 .context {
   display: flex;
   flex-wrap: wrap;
@@ -404,7 +406,7 @@ display: flex;
   margin-bottom: 8px;
   font-family: Verdana, Geneva, sans-serif;
   font-size: 14pt;
-  line-height: 10px;
+  line-height: 20px;
 }
 
 .title-index-tool {
@@ -1157,6 +1159,7 @@ p > span {
   font-family: Verdana, Geneva, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  height: 100%;
 }
 
 .customers td,
@@ -1675,9 +1678,9 @@ table td {
 
 }
 .modal-info-description{
-  color: #000000;
+  color: #7f7f81;
   font-family: Verdana, Geneva, sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 
@@ -1693,6 +1696,14 @@ table td {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 12px;
   font-weight: 200;
+}
+
+.modal-example-code{
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e9edf4;
+  color: #626263;
+  font-size:12px;
 }
 
 .logos-gta{
@@ -1726,3 +1737,24 @@ table td {
   background-size: cover;
 }
 
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 6px solid #3498db;
+  width: 50px;
+  height: 50px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

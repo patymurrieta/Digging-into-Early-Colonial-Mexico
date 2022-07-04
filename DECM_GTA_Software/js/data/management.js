@@ -266,7 +266,6 @@ function buildAnnotations(fileName, json, key){
 
   });
 
-  console.log(getAnnotations());
    //addDocumentToList
   documents.push({ name: fileName,
     key: key});

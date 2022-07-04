@@ -16,7 +16,6 @@ let statesMachine  = [[ 1,-1,-1,-1,-1,-1,-1, 0,-1,-1, 0,-1,-1,-1,-1,-1,11,-1],
                  /*1*/[-1, 2,-1,-1,-1,-1, 2, 1,-1,-1,-1,-1, 2, 2, 2, 2,-1,-1],
                  /*2*/[-1,-1, 4,-1,-1,-1,-1, 2,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
                  /*3*/[-1,-1, 4,-1,-1,-1,-1, 3,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
-                 /*4*/[-1,-1, 5,-1,-1,-1,-1, 4,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
 /*estado*/       /*5*/[-1,-1,-1, 0, 0, 0,-1, 5,-1, 6,-1, 5,-1,-1,-1,-1,-1,-1],
                  /*6*/[-1,-1,-1,-1,-1,-1,-1, 6,-1,-1, 7,-1,-1,-1,-1,-1,-1,-1],
                  /*7*/[-1,-1, 8,-1,-1,-1,-1, 7,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],
@@ -403,13 +402,15 @@ function executeQueryBuilder() {
     queryBuilderStructure.textToSearch = "";
     annotationTable.innerHTML="";
 
+    contextLoading();
     cleanPolygons();
     clearInputContext();
     cleanFilters("QUERYBUILDER");
 
     coincidences = getAnnotationsByQueryBuilder(queryBuilderStructure);
 
-   loadContextAndGazetterData(coincidences,false);
+    contextLoaded();
+   loadContextAndGazetterData(coincidences,true);
 
 }
 function executeQueryByCoords() {
@@ -418,6 +419,7 @@ function executeQueryByCoords() {
         entitiesRules:[]
     };
 
+    contextLoading();
     queryBuilt.keyWords = keywords;
     queryBuilt.entitiesRules = getEntitiesRules();
 
@@ -427,6 +429,7 @@ function executeQueryByCoords() {
 
     coincidences = getCoincidencesByMap(keywords);
 
+    contextLoaded();
    loadContextAndGazetterData(coincidences,false);
 
     return queryBuilt;
@@ -437,10 +440,11 @@ function executeQuery() {
         entitiesRules:[]
     };
 
+    contextLoading();
     queryBuilt.keyWords = keywords;
     queryBuilt.entitiesRules = getEntitiesRules();
 
-    console.log(queryBuilt);
+    console.log("filter 2");
 
     annotationTable.innerHTML="";
 
@@ -450,8 +454,8 @@ function executeQuery() {
     clearInputContext();
     cleanFilters("QUICKFILTER");
 
-    loadContextAndGazetterData(coincidences,false);
-
+    loadContextAndGazetterData(coincidences,true);
+    contextLoaded();
 
     return queryBuilt;
 }
@@ -469,6 +473,7 @@ function loadContextAndGazetterData(coincidences,bndFindInMap){
     asyncCallLoadContext(coincidences,counterContextChunk);
 
     if(bndFindInMap) {
+        console.log("buscar en mapa");
         var toponymsFiltered = filterToponymsDuplicates(coincidences);
         findCoincidencesInGazetteer(toponymsFiltered);
     }

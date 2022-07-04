@@ -6,7 +6,6 @@ bndNotAllLabels = false;
 
 function resizeMainWindow(){
 
-
     var heightContainerDashboard = $('#containerDashboard').height();
     var unitheight = heightContainerDashboard/10
 
@@ -16,7 +15,6 @@ function resizeMainWindow(){
 
     //drag and drop files screen
     var heightContainerDragDrop = $('#LoaderFiles').height();
-    console.log(heightContainerDragDrop);
     $('#loaded-files-list').height(heightContainerDragDrop-$('#button-section-dd').height()-$('#inputs-section-dd').height()-30);
 
 
@@ -48,6 +46,7 @@ function resizeMainWindow(){
     //resize references content
     $("#table-coincidences").height(heightContainerSecundaryTools-$('#header-coincidences').height());
     $("#table-context").height(heightContainerSecundaryTools-$('#header-context').height()-$('#tools-context').height());
+    $("#table-context-loading").height(heightContainerSecundaryTools-$('#header-context').height());
 
 
 }
@@ -55,11 +54,19 @@ function resizeMainWindow(){
 var counterContextChunk = 0;
 var bndLoadingContextChunk = false
 var bndLoadingContextChunkFinished = false;
+var bndOnContextTable = false;
+$("#table-context").hover(function (e){
+    bndOnContextTable = true;
+});
+
+$("#table-context").mouseleave(function (e){
+    bndOnContextTable = false;
+});
 
 $("#table-context").scroll(function (e){
     var element = e.target;
     var calculated = element.scrollHeight - element.scrollTop;
-    if (calculated >= element.clientHeight && calculated <= (element.clientHeight +100))
+    if (calculated <= element.clientHeight + 200 && bndOnContextTable )
     {
         if(!bndLoadingContextChunk && !bndLoadingContextChunkFinished) {//si no se estan cargando contextos y llegas al final del scroll
             asyncCallLoadContext(coincidences, counterContextChunk);//se carga mas contextos
@@ -67,6 +74,23 @@ $("#table-context").scroll(function (e){
     }
 });
 
+
+function contextLoading()
+{
+    console.log('hola');
+   // $('#context-content').hide();
+   // document.getElementById('table-context-loading').style.display = 'flex';
+    resizeMainWindow();
+
+}
+
+function contextLoaded()
+{
+    console.log('adios');
+   
+    document.getElementById('table-context-loading').style.display = 'none';
+    resizeMainWindow();
+}
 
 function clearInputContext(){
     $('#left-filter').val("");

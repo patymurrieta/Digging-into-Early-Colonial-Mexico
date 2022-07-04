@@ -63,6 +63,205 @@
 
 <!-- Modal -->
 
+<div class="modal  fade" id="modal-filter-entity-labels" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Filter by entity and labels</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        Modal content
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-filter-keyword" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Filter by keyword</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        Modal content
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-gazetteer-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Gazetteer Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+This shows the gazetteer used to find possible toponym matches in the corpus loaded. The
+map interacts with the Context and the Corpus Tools. Features include:
+* Zoom in and out buttons; Map View to change to different map styles; and a refresh button.
+
+* Clicking on any toponym in the gazetteer represented as dots in the map, displays further
+information about the place. This includes its name, whether this is mentioned in an
+historical source, its coordinates, and other information.
+* Placename query. Clicking on a toponym in the linked gazetteer represented as dots gives
+access to a ‘Search matches’ button. Clicking this updates the Context Tool, showing all
+those instances where this toponym is mentioned in the corpus.
+* Geographic filter. Several places can be selected using the ‘polygon tool’ in the map. This will
+update the Context Tool, showing all those instances where the locations selected are
+mentioned in the corpus. To deselect, use the ‘bin button’.
+* Clicking on any row in the Context Tool will update the map, showing the location related to
+the annotation/keyword/label/phrase in context.
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-annotation-information" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Annotation information</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Annotation information box shows further information about the
+annotation/term/phrase of interest. This includes the name of the Entity and Label assigned, the
+context in which it occurs, and information about any possible match with the geographic
+information related to the linked gazetteer.
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-context-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Context Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Context Tool shows the result of the query and its ‘keywords/annotations/labels in
+context’. The searched term, phrase, annotation, or label is shown with the context to the
+left and right in the sentence. This can be used as an output for further spatial analysis in
+Geographic Information Systems or other technologies by using the ‘Export’ function. This
+gives the option of exporting the result of the query to .csv (Excel) or .json files. Features
+include:
+* Clicking on the row to update the Corpus Tool, showing the occurrence in the text.
+This will also update the Gazetteer Tool and the Annotation information box
+accordingly.
+* Further searches filtering the context to the left and right. This can be done typing
+any word in the ‘Left context’ ‘Right context’ boxes.
+* Adjust the size of the context (i.e. amount of words to be included in the resulting
+query to the left and right of the keyword/annotation/labels).
+* A count of the matches found in the corpus.
+* Export query result to .csv or .json
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-corpus-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Corpus Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Corpus tool provides a view of the corpus uploaded. Features include:
+<br>
+* A document index on the left where each document can be turned ‘off’ and ‘on’, and that
+can be used to navigate to each document in the ‘Corpus tool’.
+* A single click on an unique annotation displays detailed information about that annotation in
+the &quot;Annotation information&quot; section. If available, in the Gazetteer Tool, doing a single click
+on a unique annotation it also takes you to the place with which that annotation is
+associated.
+* A double click on an annotation updates de Context Tool, showing each occurrence of such
+annotated word with its surrounding text to the left and right (i.e. the context).
+* On the upper right there is a switch (‘Text-Tags’) that controls how to search the corpus,
+either by double-clicking on a single annotation, or by selecting text with the mouse pointer.</pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="modal  fade" id="modal-annotations-file" role="dialog">
   <div class="modal-dialog modal-lg">
 
@@ -81,7 +280,26 @@
         </div>
       </div>
       <div class="modal-body px-4">
-       
+        <p class="modal-info-description">The GTA tool requires a file with the list of entities that are used in the corpus annotation, this file must be in JSON format and with the name "annotations-legend.json". </p>
+       <p class="modal-info-description">Below is the structure that the file should carry. This file comes when a tagtog project is downloaded</p>
+       <p class="modal-example-code">
+        {<br/>
+          &emsp;"e_8" : "Food",<br/>
+          &emsp;"e_16" : "Social_Group",<br/>
+          &emsp;"e_3" : "Institution",<br/>
+          &emsp;"f_28" : "Health",<br/>
+          &emsp;"f_24" : "Animal",<br/>
+          &emsp;"e_2" : "Date",<br/>
+          &emsp;"f_31" : "Date",<br/>
+          &emsp;"f_20" : "Gender",<br/>
+          &emsp;"e_12" : "Health",<br/>
+          &emsp;...<br/>
+        }
+       </p>
+       <ul>
+         <li class="modal-info-description">"e_#: entityName" => A field of an entity is always defined with the letter e at the beginning of the code.</li>
+         <li class="modal-info-description">"f_#: subEntityName" => A field of a sub entity is always defined with the letter f at the beginning of the code. That's fields don't gonna display them in this tool but are necessary.</li>
+       </ul> 
         
 
       </div>
@@ -99,7 +317,7 @@
         <div class="container-fluid">
           <div class="row wrapper">
             <div class="col-md-11 wrapper">
-              <h4 class="modal-title">Relations Files</h4>
+              <h4 class="modal-title">Documents</h4>
             </div>
             <div class="col-md-1 wrapper">
               <button type="button" class="close" data-dismiss="modal">&times;</button>
@@ -108,9 +326,114 @@
         </div>
       </div>
       <div class="modal-body px-4">
-       
-        
-
+        <p class="modal-info-description">The gta tool requires document and annotation file sets. When working on a <a href="https://www.tagtog.net/" target="_blank">tagtog</a> project, files like this one or the annotation one are created, one of each per worked document.</p>
+        <p class="modal-info-description">The documents that contain the text (html file) to be displayed can have two differents structures. The first accepted structure of the file is displayed:</p>
+        <pre class="modal-example-code">
+  &lt;!DOCTYPE html &gt;
+  &lt;html id="tagtogId-document_title.txt" data-origid="document_title.txt" class="anndoc" data-anndoc-version="3.6" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"/&gt;
+      &lt;meta name="generator" content="net.tagtog.anndoc.v3.parsers.general.VerbatimParser_v1_0_1"/&gt;
+      &lt;title&gt;tagtogId-document_title.txt&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+        &lt;section data-type=""&gt;
+          &lt;div class="content"&gt;
+            &lt;pre id="s1v1"&gt;Document content&lt;/pre&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/article&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+         </pre>
+         <p class="modal-info-description">The second accepted structure of the file is displayed:</p>
+        <pre class="modal-example-code">
+  &lt;!DOCTYPE html &gt;
+  &lt;html id="tagtogId-document_title.txt" data-origid="document_title.txt" class="anndoc" data-anndoc-version="3.6" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"/&gt;
+      &lt;meta name="generator" content="net.tagtog.anndoc.v3.parsers.general.VerbatimParser_v1_0_1"/&gt;
+      &lt;title&gt;tagtogId-document_title.txt&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+        &lt;section data-type=""&gt;
+          &lt;div class="content"&gt;
+            &lt;p id="s1p1"&gt;Paragraph content&lt;/p&gt;
+            &lt;p id="s1p2"&gt;Paragraph content&lt;/p&gt;
+            &lt;p id="s1p3"&gt;Paragraph content&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/article&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+         </pre>
+         <p class="modal-info-description">And finally, for the annotation files they must be in the JSON format with the following structure:</p>
+         <pre class="modal-example-code">
+    {
+      "annotatable": {
+        "parts": ["s1v1"]
+      },
+      "anncomplete": true,
+      "sources": [],
+      "metas": {},
+      "entities": [
+      {
+        "classId": "e_4",
+        "part": "s1v1",
+        "offsets": [{
+          "start": 12,
+          "text": "toponymName"
+        }],
+        "coordinates": [],
+        "confidence": {
+          "state": "pre-added",
+          "who": ["user:tagtogUsername"],
+          "prob": 1
+        },
+        "fields": {
+          "f_23": {
+            "value": "toponym",
+            "confidence": {
+              "state": "pre-added",
+              "who": ["user:tagtogUsername"],
+              "prob": 1
+            }
+          }
+        },
+        "normalizations": {}
+      },
+      {
+        "classId": "e_4",
+        "part": "s1v1",
+        "offsets": [{
+          "start": 132,
+          "text": "toponymName"
+        }],
+        "coordinates": [],
+        "confidence": {
+          "state": "pre-added",
+          "who": ["user:tagtogUsername"],
+          "prob": 1
+        },
+        "fields": {
+          "f_23": {
+            "value": "toponym",
+            "confidence": {
+              "state": "pre-added",
+              "who": ["user:tagtogUsername"],
+              "prob": 1
+            }
+          }
+        },
+        "normalizations": {}
+      },
+      ...
+      ],
+      "relations": []
+    }
+         </pre>
       </div>
     </div>
 
@@ -249,8 +572,6 @@
   </div>
 </div>
 
-
-
 <div class="modal fade" id="modalExportCoincidences" role="dialog">
   <div class="modal-dialog">
 
@@ -291,14 +612,6 @@
 
   </div>
 </div>
-
-<div id="loader" class="full-container"  >
-  <div class="lds-ripple">
-    <div></div>
-    <div></div>
-  </div>
-</div>
-
 
 <div class="modal fade" id="myModalQuery" role="dialog">
   <div class="modal-dialog modal-lg ">
@@ -494,6 +807,15 @@
   </div>
 </div>
 
+<div id="loader" class="full-container"  >
+  <div class="lds-ripple">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+
 
 <section id="corpus-loader" class=" container-fluid full-size-index">
   <section class="view " style="height: 100%;">
@@ -562,7 +884,7 @@
 
                 <div class="col-sm-8">
                   <div class="row mx-0">
-                    <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Relations Loaded</p>
+                    <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Documents Loaded</p>
                     <i data-toggle="modal" data-target="#modal-relations-files"  class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  "></i>
                   </div>
                 </div>
@@ -697,7 +1019,7 @@
                       <div id="header-corpus" class=" row wrapper">
                         <div class="col-md-4 wrapper">
                           <div class="row wrapper">
-                            <p class="title-tool">Corpus</p>
+                            <p class="title-tool">Corpus <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-corpus-tool" data-toggle="modal"></i></p>
                             <div class="title-line mb-2"></div>
 
                           </div>
@@ -729,7 +1051,7 @@
                 <div id="header-map" class=" row wrapper ">
                   <div class="col-md-5 m-0 p-0">
                     <div  class="row wrapper">
-                      <p class="title-tool">Gazetteer</p>
+                      <p class="title-tool">Gazetteer <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-gazetteer-tool" data-toggle="modal"></i></p>
                       <div class="title-line"></div>
                     </div>
                   </div>
@@ -781,7 +1103,7 @@
               <div class="second dash-space row wrapper">
                 <div id="references" class="col-md-12 p-0 m-0 toolContainer  mr-2">
                   <div id="header-coincidences" class=" row wrapper ">
-                    <p class="title-tool">Annotation information</p>
+                    <p class="title-tool">Annotation information <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-annotation-information" data-toggle="modal"></i></p>
                     <div class="title-line mb-2"></div>
 
                   </div>
@@ -839,7 +1161,7 @@
                   <div id="header-context" class=" row wrapper ">
                     <div class="col-md-4 wrapper">
                       <div class="row wrapper">
-                        <p class="title-tool">Context</p>
+                        <p class="title-tool">Context <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-context-tool" data-toggle="modal"></i></p>
                         <div class="title-line mb-2"></div>
 
                       </div>
@@ -857,42 +1179,49 @@
                     </div>
 
                   </div>
-                  <div id="tools-context" class="row wrapper">
-                    <div class="col-md-4">
-                      <div class="row wrapper">
-                        <div class="filter-body-text" style="margin-left: 20px; margin-right: 10px; margin-top: 10px; margin-bottom: 0px; padding: 0;">Context size</div>
-                        <div class="col-md-10">
-                          <input type="range" min="10" max="100" value="30" class="slider" id="contextLenghtSlider">
+                  <div id="table-context-loading"  class=" justify-content-center align-content-center align-items-center  " style="display: none;">
+                    <div class="loader"></div>
+                  </div>
+                  <div id="context-content">
+                    <div id="tools-context" class="row wrapper" >
+                      <div class="col-md-4">
+                        <div class="row wrapper">
+                          <div class="filter-body-text" style="margin-left: 20px; margin-right: 10px; margin-top: 10px; margin-bottom: 0px; padding: 0;">Context size</div>
+                          <div class="col-md-10">
+                            <input type="range" min="10" max="100" value="30" class="slider" id="contextLenghtSlider">
+                          </div>
+                          <div class="col-md-2 filter-body-text grey-text" id="contextLenght">30</div>
                         </div>
-                        <div class="col-md-2 filter-body-text grey-text" id="contextLenght">30</div>
+                      </div>
+                      <div class="col-md-4 wrapper">
+                        <input id="left-filter" name="left-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Left context">
+                      </div>
+                      <div class="col-md-4 wrapper">
+                        <input id="right-filter" name="right-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Right context">
                       </div>
                     </div>
-                    <div class="col-md-4 wrapper">
-                      <input id="left-filter" name="left-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Left context">
-                    </div>
-                    <div class="col-md-4 wrapper">
-                      <input id="right-filter" name="right-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Right context">
-                    </div>
-                  </div>
-                  <div id="table-context" class="row wrapper content toolContainer ">
-                    <div  class="table-responsive" >
-                      <table  class="customers table display pageResize" id="table-context-scroll">
-                        <thead >
-                        <tr>
-                          <th scope="col" class="title-context-center">Document</th>
-                          <th scope="col" class="title-context-center">Left</th>
-                          <th scope="col" class="title-context-center">Term</th>
-                          <th scope="col" class="title-context-center">Right</th>
-                        </tr>
-                        </thead>
-
-                        <tbody id="contextContent">
-
-                        </tbody>
-
-                      </table>
+                    <div id="table-context" class="row wrapper content toolContainer " >
+  
+                      <div  class="table-responsive" >
+                        <table  class="customers table display pageResize" id="table-context-scroll">
+                          <thead >
+                          <tr>
+                            <th scope="col" class="title-context-center">Document</th>
+                            <th scope="col" class="title-context-center">Left</th>
+                            <th scope="col" class="title-context-center">Term</th>
+                            <th scope="col" class="title-context-center">Right</th>
+                          </tr>
+                          </thead>
+  
+                          <tbody id="contextContent">
+  
+                          </tbody>
+  
+                        </table>
+                      </div>
                     </div>
                   </div>
+                  
 
                 </div>
               </div>

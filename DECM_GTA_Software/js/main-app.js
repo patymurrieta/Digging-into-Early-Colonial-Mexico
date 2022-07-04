@@ -545,7 +545,7 @@ function searchAnnotationMatches(span){
  
     if(bndClickTags===true) {
         var toSearch = "";
-
+        contextLoading();
         if (span.textContent !== "" && span.textContent !== "Search matches") {
             toSearch = span.textContent;
         } else if (span.getAttribute("toponym") !== "") {
@@ -558,11 +558,13 @@ function searchAnnotationMatches(span){
             coincidences = runFilterByKeyword(toSearch.toLowerCase());
             let contextContent = document.getElementById("contextContent");
             contextContent.innerHTML = "";
+            contextLoaded();
             loadContextAndGazetterData(coincidences, false);
             cleanFilters("DBLCLICK");
             cleanAnnotationInformation();
             //searchAnnotation(span);
         }
+        
     }
 }
 
@@ -613,6 +615,7 @@ function searchInCorpus() {
     var toSearch = "";
 
     if($("#corpus-search").val() !== ""){
+        contextLoading();
         toSearch = $("#corpus-search").val();
         annotationTable.innerHTML="";
         coincidences = runFilterByKeyword(toSearch);
@@ -624,10 +627,10 @@ function searchInCorpus() {
         {
             let contextContent= document.getElementById("contextContent");
             contextContent.innerHTML = "";
-            loadContextAndGazetterData(coincidences,false);
-            cleanFilters("TEXT")
+            loadContextAndGazetterData(coincidences,true);
+            cleanFilters("TEXT");
         }
-
+        contextLoaded();
 
 
     }
@@ -635,7 +638,7 @@ function searchInCorpus() {
 
 function searchInCorpusText(textToSearch){
 
-
+        contextLoading();
         cleanCoincidencesByKeyWord();
         documents.forEach(function (RelationDocument) {
 
@@ -654,7 +657,8 @@ function searchInCorpusText(textToSearch){
         clearInputContext();
         cleanFilters("TEXT");
 
-        loadContextAndGazetterData(coincidences, false);
+        contextLoaded();
+        loadContextAndGazetterData(coincidences, true);
 
 }
 

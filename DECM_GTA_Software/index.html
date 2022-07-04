@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <title>Geographical Text Analysis</title>
+  <!-- MDB icon -->
+  <link rel="icon" href="img/mdb-favicon.ico" type="image/x-icon">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--css para el manejo de datatables-->
+  <link rel="stylesheet" href="css/jquery.dataTables.colResize.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+
+
+  <!--leaflet references-->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.js"></script>
+  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.0/mapbox-gl.css" rel="stylesheet" />
+  <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.css' type='text/css' />
+
+  <script src="https://libs.cartocdn.com/carto-vl/v1.3.1/carto-vl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf@5/turf.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-draw/v1.0.9/mapbox-gl-draw.js'></script>
+  <script src="https://cdn.jsdelivr.net/gh/CartoDB/mapboxgl-draw-rectangle-drag@1.0.1/build/mapboxgl-draw-rectangle-drag.browser.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/drag-and-drop-styles.css" />
+
+
+  <!-- EMILIO -->
+  <style>
+    .annotated {
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 2px 4px;
+  transition: all .3s ease;
+}
+.annotated:hover{
+  filter: brightness(90%);
+}
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<!-- Modal -->
+
+<div class="modal  fade" id="modal-filter-entity-labels" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Filter by entity and labels</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        Modal content
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-filter-keyword" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Filter by keyword</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        Modal content
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-gazetteer-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Gazetteer Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+This shows the gazetteer used to find possible toponym matches in the corpus loaded. The
+map interacts with the Context and the Corpus Tools. Features include:
+* Zoom in and out buttons; Map View to change to different map styles; and a refresh button.
+
+* Clicking on any toponym in the gazetteer represented as dots in the map, displays further
+information about the place. This includes its name, whether this is mentioned in an
+historical source, its coordinates, and other information.
+* Placename query. Clicking on a toponym in the linked gazetteer represented as dots gives
+access to a ‘Search matches’ button. Clicking this updates the Context Tool, showing all
+those instances where this toponym is mentioned in the corpus.
+* Geographic filter. Several places can be selected using the ‘polygon tool’ in the map. This will
+update the Context Tool, showing all those instances where the locations selected are
+mentioned in the corpus. To deselect, use the ‘bin button’.
+* Clicking on any row in the Context Tool will update the map, showing the location related to
+the annotation/keyword/label/phrase in context.
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-annotation-information" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Annotation information</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Annotation information box shows further information about the
+annotation/term/phrase of interest. This includes the name of the Entity and Label assigned, the
+context in which it occurs, and information about any possible match with the geographic
+information related to the linked gazetteer.
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-context-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Context Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Context Tool shows the result of the query and its ‘keywords/annotations/labels in
+context’. The searched term, phrase, annotation, or label is shown with the context to the
+left and right in the sentence. This can be used as an output for further spatial analysis in
+Geographic Information Systems or other technologies by using the ‘Export’ function. This
+gives the option of exporting the result of the query to .csv (Excel) or .json files. Features
+include:
+* Clicking on the row to update the Corpus Tool, showing the occurrence in the text.
+This will also update the Gazetteer Tool and the Annotation information box
+accordingly.
+* Further searches filtering the context to the left and right. This can be done typing
+any word in the ‘Left context’ ‘Right context’ boxes.
+* Adjust the size of the context (i.e. amount of words to be included in the resulting
+query to the left and right of the keyword/annotation/labels).
+* A count of the matches found in the corpus.
+* Export query result to .csv or .json
+        </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-corpus-tool" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Corpus Tool</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <pre class="modal-info-description">
+The Corpus tool provides a view of the corpus uploaded. Features include:
+<br>
+* A document index on the left where each document can be turned ‘off’ and ‘on’, and that
+can be used to navigate to each document in the ‘Corpus tool’.
+* A single click on an unique annotation displays detailed information about that annotation in
+the &quot;Annotation information&quot; section. If available, in the Gazetteer Tool, doing a single click
+on a unique annotation it also takes you to the place with which that annotation is
+associated.
+* A double click on an annotation updates de Context Tool, showing each occurrence of such
+annotated word with its surrounding text to the left and right (i.e. the context).
+* On the upper right there is a switch (‘Text-Tags’) that controls how to search the corpus,
+either by double-clicking on a single annotation, or by selecting text with the mouse pointer.</pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-annotations-file" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Annotations Legend File</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <p class="modal-info-description">The GTA tool requires a file with the list of entities that are used in the corpus annotation, this file must be in JSON format and with the name "annotations-legend.json". </p>
+       <p class="modal-info-description">Below is the structure that the file should carry. This file comes when a tagtog project is downloaded</p>
+       <p class="modal-example-code">
+        {<br/>
+          &emsp;"e_8" : "Food",<br/>
+          &emsp;"e_16" : "Social_Group",<br/>
+          &emsp;"e_3" : "Institution",<br/>
+          &emsp;"f_28" : "Health",<br/>
+          &emsp;"f_24" : "Animal",<br/>
+          &emsp;"e_2" : "Date",<br/>
+          &emsp;"f_31" : "Date",<br/>
+          &emsp;"f_20" : "Gender",<br/>
+          &emsp;"e_12" : "Health",<br/>
+          &emsp;...<br/>
+        }
+       </p>
+       <ul>
+         <li class="modal-info-description">"e_#: entityName" => A field of an entity is always defined with the letter e at the beginning of the code.</li>
+         <li class="modal-info-description">"f_#: subEntityName" => A field of a sub entity is always defined with the letter f at the beginning of the code. That's fields don't gonna display them in this tool but are necessary.</li>
+       </ul> 
+        
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal  fade" id="modal-relations-files" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Documents</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <p class="modal-info-description">The gta tool requires document and annotation file sets. When working on a <a href="https://www.tagtog.net/" target="_blank">tagtog</a> project, files like this one or the annotation one are created, one of each per worked document.</p>
+        <p class="modal-info-description">The documents that contain the text (html file) to be displayed can have two differents structures. The first accepted structure of the file is displayed:</p>
+        <pre class="modal-example-code">
+  &lt;!DOCTYPE html &gt;
+  &lt;html id="tagtogId-document_title.txt" data-origid="document_title.txt" class="anndoc" data-anndoc-version="3.6" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"/&gt;
+      &lt;meta name="generator" content="net.tagtog.anndoc.v3.parsers.general.VerbatimParser_v1_0_1"/&gt;
+      &lt;title&gt;tagtogId-document_title.txt&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+        &lt;section data-type=""&gt;
+          &lt;div class="content"&gt;
+            &lt;pre id="s1v1"&gt;Document content&lt;/pre&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/article&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+         </pre>
+         <p class="modal-info-description">The second accepted structure of the file is displayed:</p>
+        <pre class="modal-example-code">
+  &lt;!DOCTYPE html &gt;
+  &lt;html id="tagtogId-document_title.txt" data-origid="document_title.txt" class="anndoc" data-anndoc-version="3.6" lang="" xml:lang="" xmlns="http://www.w3.org/1999/xhtml"&gt;
+    &lt;head&gt;
+      &lt;meta charset="UTF-8"/&gt;
+      &lt;meta name="generator" content="net.tagtog.anndoc.v3.parsers.general.VerbatimParser_v1_0_1"/&gt;
+      &lt;title&gt;tagtogId-document_title.txt&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;article&gt;
+        &lt;section data-type=""&gt;
+          &lt;div class="content"&gt;
+            &lt;p id="s1p1"&gt;Paragraph content&lt;/p&gt;
+            &lt;p id="s1p2"&gt;Paragraph content&lt;/p&gt;
+            &lt;p id="s1p3"&gt;Paragraph content&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/section&gt;
+      &lt;/article&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;
+         </pre>
+         <p class="modal-info-description">And finally, for the annotation files they must be in the JSON format with the following structure:</p>
+         <pre class="modal-example-code">
+    {
+      "annotatable": {
+        "parts": ["s1v1"]
+      },
+      "anncomplete": true,
+      "sources": [],
+      "metas": {},
+      "entities": [
+      {
+        "classId": "e_4",
+        "part": "s1v1",
+        "offsets": [{
+          "start": 12,
+          "text": "toponymName"
+        }],
+        "coordinates": [],
+        "confidence": {
+          "state": "pre-added",
+          "who": ["user:tagtogUsername"],
+          "prob": 1
+        },
+        "fields": {
+          "f_23": {
+            "value": "toponym",
+            "confidence": {
+              "state": "pre-added",
+              "who": ["user:tagtogUsername"],
+              "prob": 1
+            }
+          }
+        },
+        "normalizations": {}
+      },
+      {
+        "classId": "e_4",
+        "part": "s1v1",
+        "offsets": [{
+          "start": 132,
+          "text": "toponymName"
+        }],
+        "coordinates": [],
+        "confidence": {
+          "state": "pre-added",
+          "who": ["user:tagtogUsername"],
+          "prob": 1
+        },
+        "fields": {
+          "f_23": {
+            "value": "toponym",
+            "confidence": {
+              "state": "pre-added",
+              "who": ["user:tagtogUsername"],
+              "prob": 1
+            }
+          }
+        },
+        "normalizations": {}
+      },
+      ...
+      ],
+      "relations": []
+    }
+         </pre>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title ">Map Style</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+
+        <div id="menu">
+          <input
+                  id="streets-v11"
+                  type="radio"
+                  name="rtoggle"
+                  value="streets"
+
+          />
+          <label for="streets-v11">streets</label>
+          <input id="light-v10" type="radio" name="rtoggle" value="light"    checked="checked"/>
+          <label for="light-v10">light</label>
+          <input id="dark-v10" type="radio" name="rtoggle" value="dark" />
+          <label for="dark-v10">dark</label>
+          <input id="outdoors-v11" type="radio" name="rtoggle" value="outdoors" />
+          <label for="outdoors-v11">outdoors</label>
+          <input id="satellite-v9" type="radio" name="rtoggle" value="satellite" />
+          <label for="satellite-v9">satellite</label>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="modal-tool-switch-select" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+        <p class="tool-description">The Corpus tool provides a view of text. Features include:</p>
+        <ul class="tool-list-details">
+          <li class="tool-item-detail">Relations index of corpus at the left, this shows the relation being seen.</li>
+          <li class="tool-item-detail">Clicking on an unique annotation displays detailed information about that annotation in the "Annotation information" section.</li>
+          <li class="tool-item-detail">To the right is a switch that controls how to search the corpus, either by double-clicking on a single annotation or by selecting text with the mouse pointer.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+<div class="modal  fade" id="modal-queries-examples" role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title">Queries Examples</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body px-4">
+        <p class="modal-info-description">To build queries, as a first step, you must select the entity that you want to filter, then the labels that exist for that entity will be shown.</p>
+        <p class="modal-info-description">Only one query can be added per entity, the complexity of it will depend on you.</p>
+
+        <p class="modal-info-description">Some sample queries will be shown below:</p>
+
+          <table class="table">
+            <tr>
+              <td class="modal-type-example">Basic</td>
+              <td class="modal-sintaxis-example">label = "Name Label"</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="modal-type-example">Basic woth Unique annotations</td>
+              <td class="modal-sintaxis-example">label = "Name Label" Unique Annotations('Name annotation','Name annotation',..) </td>
+              <td>After a basic query you can use Unique Annotations to search only for matches to that annotation, when you select a tag those unique annotations will be displayed on the right hand side</td>
+
+            </tr>
+            <tr>
+              <td class="modal-type-example">Denied Logic (NOT)</td>
+              <td class="modal-sintaxis-example">label = NOT 'Name Label'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="modal-type-example">AND Gate </td>
+              <td class="modal-sintaxis-example">label= NOT 'Name Label' AND label = 'Name Label'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="modal-type-example">XOR Gate</td>
+              <td class="modal-sintaxis-example">label= 'Name Label' XOR label = 'Name Label'</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="modal-type-example">Dates</td>
+              <td class="modal-sintaxis-example">Example 1: label = 'dd/mm/yyyy'<br>Example 2: label >= 'dd/mm/yyyy'<br>Example 3: label >= 'dd/mm/yyyy' AND label <= 'dd/mm/yyyy'<br></td>
+              <td class="modal-type-example">Logic operators >=, <=, >, <, only can be use them for dates queries</td>
+            </tr>
+          </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="modalExportCoincidences" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+              <h4 class="modal-title ">Export Matches</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+
+        <div id="menuExports">
+          <input id="exportCSVCoincidences" type="radio" name="exporttoggle" value="0"    checked="checked"/>
+          <label for="exportCSVCoincidences" class="mr-3">CSV</label>
+          <input id="exportJSONCoincidences" type="radio" name="exporttoggle" value="1" />
+          <label for="exportJSONCoincidences">JSON</label>
+        </div>
+
+
+      </div>
+      <div class="modal-footer" >
+        <div id="progress-gta" style="display: none">
+          <div id="bar-gta">  <p id="coincidences-export" style="margin-bottom: 0; font-size: 9pt; font-family: Verdana, Geneva, sans-serif; text-align: center">1%</p></div>
+        </div>
+
+        <button id="btn-export" type="button" class="btn btn-default " onclick="exportCoincidences(this)">Export</button>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="myModalQuery" role="dialog">
+  <div class="modal-dialog modal-lg ">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="container-fluid">
+          <div class="row wrapper">
+            <div class="col-md-11 wrapper">
+
+
+              <h4 class="modal-title subtitle-searcher">Query Builder</h4>
+            </div>
+            <div class="col-md-1 wrapper">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div class="container-fluid">
+          <div class="row">
+
+            <div class="col-md-6 ">
+              <label class="step-searcher" style="margin-left: 10px;">Select documents</label>
+              <div class="row">
+                <table class="table alldocuments">
+                  <tbody>
+                  <tr>
+                    <td><input id="allDocuments" type="checkbox" name="allDocuments" value="0" checked="true"/></td>
+                    <td>Select all documents</td>
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="row content  scroller">
+                <div class="table-responsive" style="height: 150px;">
+
+                  <table class="table documents">
+                    <tbody id="documents-table" >
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+
+              <div class="row wrapper" style="margin-top: 0px;">
+                <label class="step-searcher" style="margin-left: 10px;">Size of Context</label>
+                <div class="col-md-10">
+                  <input id="contextLenghtSlider2" type="range" min="10" max="100" value="30" class="slider">
+                </div>
+                <div id="contextLenght2" class="col-md-2 filter-body-text grey-text" >30</div>
+              </div>
+
+              <div class="row wrapper" style="margin-top: 0px;">
+                <label class="step-searcher" style="margin-left: 10px;">Choose an entity</label>
+                 <div class="col-md-12 containerQueryBuilder"  >
+                  <select class="browser-default custom-select" name="entity" id="entity">
+                    <option value="" disabled selected>Choose an entity</option>
+                  </select>
+
+                </div>
+              </div>
+
+            </div>
+
+            <div style="width: 100%; height: 2px; background: #d5d6d7;"></div>
+          </div>
+        <div class="row" id="bodyQueryBuilder">
+
+
+            <div class="col-md-12">
+              <div class="row wrapper">
+
+                <div class="col-md-4" id="list-subentities" style="display: none;">
+                  <label class="control-title-searcher mt-3" style="margin-left: 10px;">Subentities</label>
+
+                  <div class="row wrapper content toolContainer containerQueryBuilder mt-1" style="height: 100px; border-color: grey; border-radius: 5px; border: 1px solid #BFBFBF;">
+                    <p class=" grey-text align-items-center justify-content-center align-items-center" style="display: none; width: 100%; height: 100%; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 15pt;">Subentities</p>
+                    <select id="subentities" class="custom-select wrapper" size="4">
+
+                    </select>
+                  </div>
+                </div>
+                <!--
+                <div class="col-md-5" id="list-labels" style="display: none;">
+                  <label class="control-title-searcher mt-3" style="margin-left: 10px;">Labels</label>
+                  <div  class="row wrapper content toolContainer containerQueryBuilder mt-1" style="height: 100px; border-color: grey; border-radius: 5px; border: 1px solid #BFBFBF;">
+                    <p class=" grey-text align-items-center justify-content-center align-items-center" style="display: none; width: 100%; height: 100%; text-align: center; font-family: Verdana, Geneva, sans-serif; font-size: 15pt;">Labels</p>
+                    <select id="labels" class="custom-select wrapper" size="4">
+
+                    </select>
+                  </div>
+                </div>
+                -->
+                <div class="col-md-5" id="list-labels">
+                  <label class="control-title-searcher mt-3" style="margin-left: 10px;">Labels</label>
+                  <div class="row content  scroller">
+                    <div class="table-responsive table-controls" >
+
+                      <table class="table documents">
+
+                        <tbody id="labels">
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                  <label class="control-title-searcher mt-3" style="margin-left: 10px;">Unique Annotations</label>
+                  <div class="row content  scroller">
+                    <div class="table-responsive table-controls" >
+
+                      <table class="table documents">
+
+                        <tbody id="uniqueAnnotations">
+
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 p-0 my-3 containerQueryBuilder" >
+                  <div class="row wrapper d-flex justify-content-center align-items-center">
+                    <i id="controlEqual"  class="control-query m-2 fas fa-equals white-text "></i>
+                    <i id="controlGreatherThanEqual"  class="control-query m-2 fas fa-greater-than-equal white-text"></i>
+                    <i id="controlLessThanEqual"  class="control-query m-2 fas fa-less-than-equal white-text"></i>
+                    <i id="controlLessThan"   class="control-query m-2 fas fa-less-than white-text"></i>
+                    <i id="controlGratherThan" class="control-query m-2 fas fa-greater-than white-text"></i>
+                    <i id="controlParenthesis" class="control-query control-query-font m-2 white-text font-weight-bold">( )</i>
+                    <i id="controlXor" class="control-query control-query-font m-2 white-text font-weight-bold">Xor</i>
+                    <i id="controlAnd" class="control-query control-query-font m-2 white-text font-weight-bold">And</i>
+                    <i id="controlOr" class="control-query control-query-font m-2 white-text font-weight-bold">Or</i>
+                    <i id="controlNot"class="control-query control-query-font m-2 white-text font-weight-bold">Not</i>
+                    <i id="controlKeyWords" class="control-query control-query-font m-2 white-text font-weight-bold">Unique Annotations</i>
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+            <div class="row wrapper"style="height: 140px">
+              <div class="col-md-8 containerQueryBuilder">
+                <label id="entitySubject" class="subject-query">ENTITY NOT YET SELECTED</label>
+                <textarea name="conditionEntity" rows="3" class="conditionEntity" id="queryOfEntity" required autocomplete="off"></textarea>
+                <p style="color: red;" id="errorValidation"></p>
+              </div>
+              <div class="col-md-4 p-0 my-3 d-flex justify-content-center align-content-center align-items-center">
+                    <button id="btnValidate" style="display: none;" type="button" class="btn btn-sm btn-amber" >Validate</button>
+                    <button id="btnAddQuery" type="button" class="btn btn-lg btn-default" disabled>Add Query Condition</button>
+              </div>
+            </div>
+
+            <div class="col-md-12 mt-4">
+
+              <div class="row content  scroller">
+                <div class="table-responsive" style="height: 120px;">
+
+                  <table class="table documents">
+                    <thead>
+                    <tr>
+                      <th>Entity</th>
+                      <th>Query</th>
+                      <th>Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody id="queries-builder-table" >
+
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-amber" onclick="cleanAllQueryBuilder()">Clear All</button>
+
+        <a href="" onclick="createFileQuery('prueba.json','json/plain',this)"><button type="button" class="btn btn-outline-blue" >Export</button></a>
+
+        <button type="button" class="btn btn-default" data-dismiss="modal" onclick="executeQueryBuilder()">Execute Query</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="loader" class="full-container"  >
+  <div class="lds-ripple">
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+
+
+<section id="corpus-loader" class=" container-fluid full-size-index">
+  <section class="view " style="height: 100%;">
+    <img src="img/gta.png" class="img-fluid gta-img-background">
+    <div class="mask container-fluid" style="height: 100%; padding: 0px; margin: 0px;">
+
+
+      <div class="row wrapper" style="height: 100%;">
+        <div class="col-md-8">
+          <div class="row">
+            <h3 class="h3-responsive title-index-tool">Geographical Text Analysis </h3>
+          </div>
+          <div class="row">
+            <div class="logos-gta">
+              <img src="img/inah-logo.png" class="img-fluid">
+              <img src="img/Lancaster_logo.png" class="ml-3 img-fluid">
+            </div>
+
+            <div class="social-links">
+              <a href="https://github.com/patymurrieta/Digging-into-Early-Colonial-Mexico/tree/master/DECM_GTA_Software#" target="_blank"><i class="fab fa-github  color-gray"> GitHub</i></a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 p-3 d-flex justify-content-center align-items-center justify-content-center"
+            >
+          <div id="LoaderFiles" style="height: 100%; display: inline; width: 100%; padding: 0px; margin: 0px;
+          border-radius: 10px;
+          background: white;
+          " class="row">
+            <div id="inputs-section-dd" class=" wrapper" style=" width: 100%;">
+              <div class="corpus-files-loader">
+                <div class="drag-and-drop">
+                  <div class="dad-mask" ondragenter="allowFilesDragging(this)">
+                    <div style="position: absolute;" class="wrapper">
+                      <p style="padding: 0px!important; font-size: 14px; color: #454444; font-weight: bolder; margin-bottom: 3px!important; font-family: 'Source Sans Pro', sans-serif">Upload your files here</p>
+                      <p style=" padding: 0px!important; font-size: 16px; color: grey; font-weight: bolder; margin-bottom: 7px!important; font-family: 'Source Sans Pro', sans-serif"> <i class="fas fa-sm fa-file-import"></i></p>
+
+                    </div>
+                    <div id="loaded-files">
+                    </div>
+                  </div>
+                  <input type="file" name="dad-input" ondrop="disableFilesDragging(this)" ondragexit="dragOut(this)" onchange="newInputFile(this)" multiple accept=".json,.html" />
+
+                </div>
+              </div>
+
+              <div class="row mb-2 mx-0">
+
+                <div class="col-sm-8">
+                  <div class="row mx-0">
+                    <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Annotations Legend File  </p>
+                    <i  data-toggle="modal" data-target="#modal-annotations-file"  class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  " ></i>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4  d-flex justify-content-center align-items-center">
+                  <p id="lbl-legend-file-status" class="pl-3 py-1 pr-1 m-0 failed-file" style=" font-size: 14px;  font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Empty</p>
+                  <i  id="btn-delete-legend-file" onclick="removeInputFile('annotations-legend')" class="fas fa-trash-alt ml-1" style="color: #cfcfd2; display: none;"></i>
+                </div>
+              </div>
+
+              <div style="height: 1px; width: 100%; background: #e9edf4;"></div>
+
+              <div class="row mb-1 mx-0">
+
+                <div class="col-sm-8">
+                  <div class="row mx-0">
+                    <p class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">Documents Loaded</p>
+                    <i data-toggle="modal" data-target="#modal-relations-files"  class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  "></i>
+                  </div>
+                </div>
+
+
+                <div class="col-sm-4  d-flex justify-content-center align-items-center">
+                  <p id="lbl-relations-counter" class="pl-3 py-1 pr-1 m-0" style=" font-size: 14px; color: #7f7f81; font-weight: normal;  font-family: 'Source Sans Pro', sans-serif">0 Loaded</p>
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div class=" mt-2" id="loaded-files-list" >
+
+            </div>
+
+            <div id="button-section-dd" class="wrapper px-2 gta-button-start" >
+              <button id="corpus-loader-trigger" class="corpus-button-loader">Process corpus</button>
+            </div>
+          </div>
+
+
+          <div id="progressLoaded" style=" padding: 0px; margin: 0px;
+          border-radius: 10px;
+          background: white;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          ">
+            <div class="box-progress">
+              <div class="percent">
+                <svg>
+                  <circle cx="70" cy="70" r="70"></circle>
+                  <circle id="circlePercentProgress" cx="70" cy="70" r="70"></circle>
+                </svg>
+                <div class="number">
+                  <h2 id="percentProgress">87</h2><span>%</span>
+                </div>
+              </div>
+              <h2 id="numberProgress" class="text">1 of 12</h2>
+              <h2 id="processingRelation" class="relationprogress">Relacionde acuña del libreo sdsanidsa de MExico</h2>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</section>
+
+
+<section id="gta-tools" class="container-fluid full-size">
+  <div class="row wrapper" style="height: 100%;">
+    <div id="colFilters" class="col-md-2 m-0 pr-2 pl-0" style="background-color: transparent; height: 100%; ">
+
+      <div id="containerFilters" class="container-fluid toolContainer pb-2" >
+        <div id="title-Filters" class="row wrapper">
+          <p class="title-tool p-0">Filter by keyword</p>
+          <div class="filter-line"></div>
+        </div>
+        <div id="general-controls" class="row wrapper">
+          <div class="col-md-12 mt-2" >
+            <input id="corpus-search" name="corpus-search" class="filter-input" type="text" placeholder="Type here">
+          </div>
+          <div class="col-md-12 wrapper mt-4 d-flex justify-content-center align-content-center align-items-center"><button class="button-filter" onclick="searchInCorpus()">Apply filter</button></div>
+        </div>
+
+        <div id="title_filter_name" class="row wrapper">
+          <p class="title-tool p-0">Filter by entity and labels</p>
+          <div class="filter-line"></div>
+        </div>
+        <div id="entities-controls"  class="row wrapper mt-2" style="height: 550px; overflow-y: scroll;">
+          <div class="container-fluid">
+            <ul id="entitiesCheckBoxes" class="m-0 p-0 menu" style="width: 100%;"></ul>
+          </div>
+        </div>
+        <div id="buttons-controls" class="row wrapper " style="height: 15%;">
+          <div class="col-md-12 wrapper mt-2 d-flex justify-content-center align-content-center align-items-center"><button id="buttonFilter" class="button-filter" onclick="executeQuery()">Apply filter</button></div>
+          <!--
+          <div class="col-md-3 wrapper mt-2 d-flex justify-content-center align-content-center align-items-center">
+            <i class="fas fa-cog fa-lg grey-text"  data-toggle="modal" data-target="#myModalQuery"></i>
+          </div>
+  -->
+          <div class="row wrapper">
+            <p class="title-tool p-0">Built Complex Query</p>
+            <div class="filter-line"></div>
+          </div>
+
+          <button class="button-export mt-3" >Import Query<input type="file" id="btnImportQueries" class="button-export"></button>
+          <div class="row mt-2" style="width: 100%;">
+            <div class="col-sm-10">
+              <button  class="button-filter" data-toggle="modal" data-target="#myModalQuery" >Build Query</button>
+
+            </div>
+            <div class="col-sm-2 d-flex align-items-center justify-content-center">
+              <i class="fas fa-info-circle" style="color:#cfcfd2;" data-target="#modal-queries-examples" data-toggle="modal"></i>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="containerDashboard" class="container-fluid col-md-10 m-0 p-0" style="background-color: transparent; height: 100%;">
+
+      <div id="containerTitle" class="row wrapper" style="background-color: transparent">
+        <h2 class="h2-responsive title-text-tool align-content-center align-items-center justify-content-center">Geographical Text Analysis</h2>
+      </div>
+      <div id="containerTools" class="row wrapper" style="background-color: transparent; height: 90%;" >
+        <div class="container-fluid" style="height: 100%;">
+          <div id="rowMainTools" class="row" style="height: 70%; background-color: transparent">
+            <div id="corpusToolContainer">
+              <div id="dragbar"></div>
+              <div id="corpusContent" class="container-fluid toolContainer">
+                  <div id="first" class="dash-space row wrapper">
+                    <div  class="index col-md-4 m-0 p-0">
+                      <div id="header-index" class="title-index row wrapper">
+                        <p class="title-tool">Documents index</p>
+                        <div class="title-line"></div>
+                      </div>
+                      <div id="documents-index" class="content">
+                      </div>
+                    </div>
+                    <div id="corpus"  class="corpus col-md-8 p-0 m-0 toolContainer">
+                      <div id="header-corpus" class=" row wrapper">
+                        <div class="col-md-4 wrapper">
+                          <div class="row wrapper">
+                            <p class="title-tool">Corpus <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-corpus-tool" data-toggle="modal"></i></p>
+                            <div class="title-line mb-2"></div>
+
+                          </div>
+
+                        </div>
+
+                        <div class="col-md-8 justify-content-end align-content-end align-items-center d-flex ">
+                          <label class="switch-select-text">Text</label>
+                          <label class="switch">
+                            <input id="cbToolSelectText" type="checkbox" checked>
+                            <span class="slider-tag round"></span>
+                          </label>
+                          <label class="switch-select-text">Tags</label>
+                          <i class="fas fa-info-circle d-flex justify-content-center align-items-center" style="color:#cfcfd2;  margin-bottom: 6px;" data-toggle="modal" data-target="#modal-tool-switch-select"></i>
+
+
+                        </div>
+
+                      </div>
+                      <div id="textCorpus" class="row wrapper content toolContainer unselectable"></div>
+                    </div>
+                  </div>
+              </div>
+
+
+            </div>
+            <div id="Map">
+              <div class="container-fluid toolContainer">
+                <div id="header-map" class=" row wrapper ">
+                  <div class="col-md-5 m-0 p-0">
+                    <div  class="row wrapper">
+                      <p class="title-tool">Gazetteer <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-gazetteer-tool" data-toggle="modal"></i></p>
+                      <div class="title-line"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-7 m-0 p-2 d-flex justify-content-end align-items-end">
+                    <div class="box" style="display: none;">
+                      <input type="file" name="gazetteer-file-csv" id="file-gazetteer-csv" class="inputfile inputfile-5"  accept="text/csv"/>
+                      <label  style="margin: 0px;" for="file-gazetteer-csv"><i id="btn-upload-gazetteer-csv" class="fas fa-file-upload map-button"></i>    <span class="text-map-button">CSV</span></label>
+
+                    </div>
+                    <div class="box" style="display: none;">
+                      <input type="file" name="gazetteer-file" id="file-gazetteer" class="inputfile inputfile-5"  accept="application/json"/>
+                      <label  style="margin: 0px;" for="file-gazetteer"><i id="btn-upload-gazetteer" class="fas fa-file-upload map-button"></i>    <span class="text-map-button">JSON</span></label>
+
+                    </div>
+
+                    <div class="box">
+                      <input type="button" id="btn-refresh-gazetteer"  class="inputfile inputfile-5"  >
+
+                      </input>
+                      <label  style="margin: 0px;" for="btn-refresh-gazetteer" >
+                        <i class="fas fa-retweet map-button"></i>
+                        <span class="text-map-button">Refresh</span>
+                      </label>
+                    </div>
+
+                    <i data-toggle="modal" data-target="#myModal">
+                    <div class="box" style="margin-right: 10px;">
+                       <label style="margin: 0px;"><i id="btn-styles-map"   class="fas fa-globe-americas map-button"></i> <span class="text-map-button">Map view</span></label>
+                    </div>
+                    </i>
+                  </div>
+                </div>
+                <div id="mapid" style="display: none;">
+
+                </div>
+                  <div id="toponymsMessageContainer" class="justify-content-center align-content-center align-items-center" style="width: 100%; height: 85%;">
+                    <i id="toponyms-icon"   class="fas fa-spinner fa-2x mb-3" style="display: none; color: grey;"></i>
+                    <p id="toponymsMessage" >Refresh to get toponyms data</p>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+          <div id="rowSecundaryTools" class="row pb-2" style="height: 30%; background-color: transparent;">
+
+            <div id="referencesToolContainer" class="mt-2" >
+
+              <div id="dragbarSencundaryTools"></div>
+              <div class="second dash-space row wrapper">
+                <div id="references" class="col-md-12 p-0 m-0 toolContainer  mr-2">
+                  <div id="header-coincidences" class=" row wrapper ">
+                    <p class="title-tool">Annotation information <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-annotation-information" data-toggle="modal"></i></p>
+                    <div class="title-line mb-2"></div>
+
+                  </div>
+                  <div id="table-coincidences" class="row wrapper content toolContainer scroller">
+
+
+                    <div class="row wrapper mb-3">
+                      <div class="col-md-8">
+                        <p class="annotation-information-title">Document</p>
+                        <p id="Annotation-relation" class="annotation-information-details"></p>
+                      </div>
+
+                    </div>
+
+                    <div class="row wrapper mb-3">
+                      <div class="col-md-3">
+                        <p class="annotation-information-title">Entity</p>
+                        <p id="Annotation-entity" class="annotation-information-details"></p>
+                      </div>
+                      <div class="col-md-2">
+                        <p class="annotation-information-title">Paragraph</p>
+                        <p id="Annotation-paragraph" class="annotation-information-details"></p>
+                      </div>
+                      <div class="col-md-2">
+                        <p class="annotation-information-title">Index</p>
+                        <p id="Annotation-index" class="annotation-information-details"></p>
+                      </div>
+                      <div class="col-md-5">
+                        <p class="annotation-information-title">Labels</p>
+                        <p id="Annotation-labels" class="annotation-information-details"></p>
+                      </div>
+                    </div>
+
+                    <div class="row wrapper mb-3">
+                      <div class="col-md-12">
+                        <p class="annotation-information-title">Context</p>
+                        <p id="Annotation-context" class="annotation-information-details"></p>
+                      </div>
+
+                    </div>
+                    <div class="line-full my-2"></div>
+
+                    <div id="annotations-table"  class="row wrapper mb-3">
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="corpusContext" class="mt-2">
+              <div class="second dash-space row wrapper">
+                <div id="" class="col-md-12 p-0 m-0 toolContainer  mr-2">
+                  <div id="header-context" class=" row wrapper ">
+                    <div class="col-md-4 wrapper">
+                      <div class="row wrapper">
+                        <p class="title-tool">Context <i class="fas fa-info-circle fa-sm" style="color:#cfcfd2;" data-target="#modal-context-tool" data-toggle="modal"></i></p>
+                        <div class="title-line mb-2"></div>
+
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-8 justify-content-end align-content-end d-flex ">
+                      <!--
+                      <a type="button" href="" onclick="exportCoincidencesToFile('json/plain',this,'json')"><button type="button" class="btn btn-link btn-sm btn-export">Export</button></a>
+-->
+
+                      <p id="coincidences-progress" class="progress-result">Without Matches</p>
+                      <button id="btnExportCoincidences" type="button" style="display: none;" class="btn btn-link btn-sm btn-export" data-toggle="modal" data-target="#modalExportCoincidences">Export</button>
+
+                    </div>
+
+                  </div>
+                  <div id="table-context-loading"  class=" justify-content-center align-content-center align-items-center  " style="display: none;">
+                    <div class="loader"></div>
+                  </div>
+                  <div id="context-content">
+                    <div id="tools-context" class="row wrapper" >
+                      <div class="col-md-4">
+                        <div class="row wrapper">
+                          <div class="filter-body-text" style="margin-left: 20px; margin-right: 10px; margin-top: 10px; margin-bottom: 0px; padding: 0;">Context size</div>
+                          <div class="col-md-10">
+                            <input type="range" min="10" max="100" value="30" class="slider" id="contextLenghtSlider">
+                          </div>
+                          <div class="col-md-2 filter-body-text grey-text" id="contextLenght">30</div>
+                        </div>
+                      </div>
+                      <div class="col-md-4 wrapper">
+                        <input id="left-filter" name="left-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Left context">
+                      </div>
+                      <div class="col-md-4 wrapper">
+                        <input id="right-filter" name="right-filter" class="filter-input-context wrapper" style="width: 80%;" type="text" placeholder="Right context">
+                      </div>
+                    </div>
+                    <div id="table-context" class="row wrapper content toolContainer " >
+  
+                      <div  class="table-responsive" >
+                        <table  class="customers table display pageResize" id="table-context-scroll">
+                          <thead >
+                          <tr>
+                            <th scope="col" class="title-context-center">Document</th>
+                            <th scope="col" class="title-context-center">Left</th>
+                            <th scope="col" class="title-context-center">Term</th>
+                            <th scope="col" class="title-context-center">Right</th>
+                          </tr>
+                          </thead>
+  
+                          <tbody id="contextContent">
+  
+                          </tbody>
+  
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  
+
+                </div>
+              </div>
+            </div>
+
+              <div id="dragbarRowTools">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+
+<!-- jQuery -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<!-- Your custom scripts (optional) -->
+  <script type="text/javascript" src="js/ViewController/mapViewController.js"></script>
+  <script type="text/javascript" src="js/ViewController/dashboardViewControllerWindows.js"></script>
+  <script type="text/javascript" src="js/ViewController/gazetteerViewController.js"></script>
+  <script type="text/javascript" src="js/DataController/dataFrameController.js"></script>
+  
+  
+  <!-- EMILIO -->
+  <script type="text/javascript" src="js/data/management.js"></script>
+  <script src="js/main-app.js"></script>
+  <script type="text/javascript" src="js/drag-and-drop-controller.js"></script>
+<script type="text/javascript" src="js/DataController/queryStatesMachines.js"></script>
+
+<!--scripts para el manejo de datatables-->
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<script src="js/ViewController/jquery.dataTables.colResize.js"></script>
+
+<script type="text/javascript">
+
+  var keywords = [];
+  var coincidences = [];
+
+
+  //funciones para manipualcion visual de keywords
+
+
+
+  function addKeyword() {
+    var keywordAlone = document.getElementById("keyword-alone");
+    var keywordAloneDash = document.getElementById("keyword-search");
+
+    if(keywordAlone.value !== "") {
+      keywords.push(keywordAlone.value);
+      keywordAlone.value = "";
+      reloadKeyWords();
+    } else if(keywordAloneDash.value !== "") {
+      keywords.push(keywordAloneDash.value);
+      keywordAloneDash.value = "";
+
+      reloadKeyWords();
+    }
+
+  }
+  function removekeyword(keyword) {
+    keywords = keywords.filter(item => item !== keyword);
+    reloadKeyWords();
+  }
+  function deleteAllKeywords() {
+    keywords = [];
+    reloadKeyWords();
+  }
+
+
+  //creacion del query en estructura
+  var annotationTable = document.getElementById("annotations-table");
+  var queryBuilt={
+    keyWords: [],
+    entitiesRules:[]
+  };
+
+
+
+
+  function  getEntitiesRules() {
+    var entitiesRules = [];
+    document.getElementsByName("entities").forEach(function (entityQuerycheckbox) {
+      if(entityQuerycheckbox.checked){
+        var entityRule={
+          keyEntity: "",
+          subentities:[]
+        };
+        entityRule.keyEntity = entityQuerycheckbox.value;
+        document.getElementsByName("label:"+entityRule.keyEntity).forEach(function (subentity) {
+          if(subentity.checked){
+            entityRule.subentities.push(subentity.value);
+          }
+        });
+        /*var query = document.getElementById(code+"Query").value;
+        if(query !== ""){
+          entityRule.labelsRules.push(getLabelsRules(query));
+        }*/
+        entitiesRules.push(entityRule);
+      }
+    });
+  console.log(entitiesRules);
+    return entitiesRules;
+  }
+
+
+  function loadAnnotationInTable(annotation, number) {
+
+    var line = document.createElement("tr");
+
+    var column0 = document.createElement("td");
+    column0.innerHTML= number;
+    line.appendChild(column0);
+
+    var column1 = document.createElement("td");
+    column1.innerHTML= annotation.relation;
+    line.appendChild(column1);
+
+    var column2 = document.createElement("td");
+    column2.innerHTML= annotation.index;
+    line.appendChild(column2);
+
+    var column3 = document.createElement("td");
+    column3.innerHTML= annotation.label;
+    line.appendChild(column3);
+
+
+    var column5 = document.createElement("td");
+    column5.innerHTML= getEntityByKey(annotation.classId.value);
+    line.appendChild(column5);
+
+    var column6 = document.createElement("td");
+    column6.innerHTML= annotation.classId.labels;
+    line.appendChild(column6);
+
+
+
+    annotationTable.appendChild(line);
+  }
+
+//validateQuery("");
+
+
+</script>
+</body>
+</html>

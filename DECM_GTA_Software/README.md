@@ -1,5 +1,5 @@
 ![alt text](https://www.lancaster.ac.uk/digging-ecm/wp-content/uploads/2018/04/Logo-sticky-header-345.png  "Digging into Early Colonial Mexico Logo")
-# The DECM Geographical Text Analysis Software -COMING IN 2021!
+# The DECM Geographical Text Analysis Software -COMING IN 2022!
 
 ## What you will find here
 The GTA software is being developed in collaboration with the [National Centre of High Performance Computing in Mexico](http://www.cns-ipicyt.mx/youilab) at the moment. Its aim is to carry out spatial queries from annotated texts and an accompanying gazetteer.

@@ -1,4 +1,26 @@
-﻿
+Data_Element	Description
+dc.contributor.author	Acuña, René, Ed.
+dc.date.accessioned	2016-09-27T00:13:35Z
+dc.date.available	2016-09-27T00:13:35Z
+dc.date.issued	2016
+dc.identifier.isbn	968837-598-9
+dc.identifier.uri	http://ru.iia.unam.mx:8080/handle/10684/78
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Antropológicas UNAM
+dc.relation.ispartofseries	Serie Antropológica;74
+dc.subject	Cazonci
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos Agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.title	Relaciones geográficas del siglo XVI: Michoacán
+dc.type	Book
+dc.coverage	Ciudad de México
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
 RELACIÓN DE AJUCHITLAN Y SU PARTIDO
 
 

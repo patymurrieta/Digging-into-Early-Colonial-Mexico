@@ -1,4 +1,26 @@
-﻿RELACIONES GEOGRÁFICAS DEL SIGLO XVI: MÉXICO
+﻿Data_Element	Description
+dc.contributor.author	Acuña, René, Ed.
+dc.date.accessioned	2018-01-25T02:00:07Z
+dc.date.available	2018-01-25T02:00:07Z
+dc.date.issued	2017
+dc.identifier.isbn	968-887-598-5
+dc.identifier.uri	http://ru.iia.unam.mx:8080/handle/10684/98
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Antropológicas
+dc.relation.ispartofseries	PublicacionesIIA;
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.subject	Relaciones geográficas del siglo XVI: México
+dc.title	Relaciones Geográficas del Siglo XVI: México Tomo 2
+dc.type	Book
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
+ RELACIONES GEOGRÁFICAS DEL SIGLO XVI: MÉXICO
 
 RELACIÓN DE MEXICALTZINGO Y SU PARTIDO
 

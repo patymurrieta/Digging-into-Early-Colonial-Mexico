@@ -1,3 +1,22 @@
+Data_Element	Description
+dc.contributor.author	de la Garza, Mercedes; Izquierdo, Maria Luisa; Leon, Ma. Del Carmen; Figueroa, Tolita, Eds.
+dc.date.issued	2008
+dc.identifier.isbn	968580625X
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Filológicas
+dc.relation.ispartofseries	Fuentes para el estudio de la cultura maya, I
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.subject	Relaciones historico-geográficas de la Gobernación de Yucatán
+dc.title	Relaciones historico-geográficas de la Gobernación de Yucatán. Tomo 1
+dc.type	Book
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
 RELACIONES HISTÓRICO-GEOGRAFICAS DE LA  PROVINCIA DE MÉRIDA
 
 ----------

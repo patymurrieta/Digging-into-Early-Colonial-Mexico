@@ -1,3 +1,21 @@
+Data_Element	Description
+dc.contributor.author	Del Paso y Troncoso, Francisco
+dc.date.issued	1905
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Filológicas
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.subject      Manuscrito 2.800 de la Biblioteca Nacional de Madrid
+dc.subject	Suma de visita de pueblos Siglo XVI
+dc.title	SUMA DE VISITAS DE PUEBLOS POR ORDEN ALFABÉTICO 
+dc.type	Book
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
 PAPELES DE NUEVA ESPAÑA
 SEGUNDA SERIE 
 GEORBAFIA Y ESTADÍSTICA 

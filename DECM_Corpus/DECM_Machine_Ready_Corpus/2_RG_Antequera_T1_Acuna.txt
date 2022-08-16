@@ -1,4 +1,27 @@
-﻿
+Data_Element	Description
+dc.contributor.author	Acuña, René, Ed.
+dc.date.accessioned	2016-04-01T00:19:02Z
+dc.date.available	2016-04-01T00:19:02Z
+dc.date.issued	2016
+dc.identifier.isbn	968-58-0644-6
+dc.identifier.uri	http://ru.iia.unam.mx:8080/handle/10684/71
+dc.description.sponsorship	Proyecto TUL1412 Toda la Unam en Línea
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Antropológicas
+dc.relation.ispartofseries	Serie Antropológica;54
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Sacerdotes
+dc.subject	Yerbas medicinales
+dc.subject	Prácticas médicas
+dc.subject	Matrimonio
+dc.subject	Prácticas religiosas
+dc.subject	cultivos
+dc.title	Relaciones geográficas del siglo XVI: Antequera. Tomo I.
+dc.type	Book
+dc.coverage	México, D.F.
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***﻿
 DESCRIPCIÓN DE LA CIUDAD DE ANTEQUERA DEL VALLE DE GUAXACA
 
 Guaxaca, Nueva España. Número 31. Descripción, Antequera en el valle de Guaxaca. (Cómo se fundó. Capítulo Primero. Juan Núñez Sedeño y Hernando de Badajoz, y después la Audiencia.)

@@ -1,4 +1,26 @@
-﻿RELACIONES GEOGRÁFICAS DEL SIGLO XVI: TLAXCALA
+Data_Element	Description
+dc.contributor.author	Acuña, René, Ed.
+dc.date.accessioned	2018-01-25T02:09:15Z
+dc.date.available	2018-01-25T02:09:15Z
+dc.date.issued	2017
+dc.identifier.isbn	968-837-398-2
+dc.identifier.uri	http://ru.iia.unam.mx:8080/handle/10684/102
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Antropológicas
+dc.relation.ispartofseries	PublicacionesIIA;
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.subject	Relaciones geográficas del siglo XVI: Tlaxcala
+dc.title	Relaciones Geográficas del Siglo XVI: Tlaxcala tomo 2
+dc.type	Book
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
+RELACIONES GEOGRÁFICAS DEL SIGLO XVI: TLAXCALA
 
 RELACIÓN DE ACATLAN Y SU PARTIDO
 

@@ -41,7 +41,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 https://www.lancaster.ac.uk/digging-ecm/
 
 ### How to cite this resource: 
-Murrieta-Flores, Patricia, Diego Jiménez-Badillo, Bruno Emanuel da Graça Martins, Mariana Favila-Vázquez, Raquel Liceras-Garrido, and Katherine Bellamy. ‘Digging into Early Colonial Mexico General Gazetteer’, May 2020. doi:10.6084/m9.figshare.12367385.v2.
+Murrieta-Flores, Patricia, Diego Jiménez-Badillo, Bruno Emanuel da Graça Martins, Mariana Favila-Vázquez, Raquel Liceras-Garrido, and Katherine Bellamy (2020) ‘Digging into Early Colonial Mexico General Gazetteer’, Figshare Dataset. doi:10.6084/m9.figshare.12367385.v2.
 
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins

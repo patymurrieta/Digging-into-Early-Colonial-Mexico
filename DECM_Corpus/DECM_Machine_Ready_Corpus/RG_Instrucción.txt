@@ -1,3 +1,25 @@
+Data_Element	Description
+dc.contributor.author	Acuña, René, Ed.
+dc.date.accessioned	2018-01-25T01:53:01Z
+dc.date.available	2018-01-25T01:53:01Z
+dc.date.issued	1982
+dc.identifier.isbn	968-58-0270-X
+dc.identifier.uri	http://ru.iia.unam.mx:8080/handle/10684/96
+dc.language.iso	es
+dc.publisher	Instituto de Investigaciones Antropológicas
+dc.relation.ispartofseries	PublicacionesIIA;
+dc.subject	Religión
+dc.subject	Plantas medicinales
+dc.subject	Cultivos agrícolas
+dc.subject	Música
+dc.subject	Formas de gobierno
+dc.subject	Ritos ceremoniales
+dc.subject	Enfermedades
+dc.subject	Relaciones geográficas del siglo XVI: Instruccion y memoria
+dc.title	Relaciones Geográficas del Siglo XVI: Guatemala
+dc.type	Book
+dc.description	Machine readable dataset produced by Lancaster University project Digging into Early Colonial Mexico. https://www.lancaster.ac.uk/digging-ecm/
+***
 INSTRUCCIÓN Y MEMORIA DE LAS RELACIONES QUE
 
 se han de hacer para la descripción de las indias que su majestad manda hacer, para el buen gobierno y ennoblecimiento dellas 

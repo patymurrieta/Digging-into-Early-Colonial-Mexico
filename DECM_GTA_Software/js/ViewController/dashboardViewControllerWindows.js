@@ -66,8 +66,10 @@ $("#table-context").mouseleave(function (e){
 $("#table-context").scroll(function (e){
     var element = e.target;
     var calculated = element.scrollHeight - element.scrollTop;
-    if (calculated <= element.clientHeight + 200 && bndOnContextTable )
+
+    if (calculated <= element.clientHeight + 200 && bndOnContextTable)
     {
+
         if(!bndLoadingContextChunk && !bndLoadingContextChunkFinished) {//si no se estan cargando contextos y llegas al final del scroll
             asyncCallLoadContext(coincidences, counterContextChunk);//se carga mas contextos
         }
@@ -115,6 +117,7 @@ $('#dragbar').mousedown(function(e){
 
     $('#containerTools').mousemove(function(e){
         ghostbar.css("left",(e.pageX+2)- document.getElementById("colFilters").offsetWidth);
+        bndOnContextTable = false;
     });
 
 
@@ -129,6 +132,7 @@ $('#containerTools').mouseup(function(e){
         $('#containerTools').unbind('mousemove');
         dragging = false;
         window.dispatchEvent(new Event('resize'));
+        bndOnContextTable = false;
     }
 });
 
@@ -150,7 +154,9 @@ $('#dragbarSencundaryTools').mousedown(function(e){
         }).appendTo('#rowSecundaryTools');
 
     $('#containerTools').mousemove(function(e){
+
         ghostbar.css("left",(e.pageX+2)- document.getElementById("colFilters").offsetWidth);
+        bndOnContextTable = false;
     });
 });
 
@@ -196,6 +202,7 @@ $('#containerTools').mouseup(function(e){
         $('#containerTools').unbind('mousemove');
         draggingSecundary = false;
         window.dispatchEvent(new Event('resize'));
+        bndOnContextTable = false;
     }
 });
 
@@ -218,6 +225,7 @@ $('#dragbarRowTools').mousedown(function(e){
     $('#containerTools').mousemove(function(e){
         ghostbar.css("top",e.pageY+2);
         window.dispatchEvent(new Event('resize'));
+        bndOnContextTable = false;
     });
 });
 
@@ -230,6 +238,7 @@ $('#containerTools').mouseup(function(e){
         $('#containerTools').unbind('mousemove');
         draggingRowTools = false;
         window.dispatchEvent(new Event('resize'));
+        bndOnContextTable = false;
 
     }
 });
@@ -608,7 +617,6 @@ $("#textCorpus").scroll(function () {
                 if(bndNewIndex !== document.key) {
                         bndOldIndex = bndNewIndex;
                         bndNewIndex = document.key;
-                    console.log("viendo: "+bndNewIndex + " visto: "+bndOldIndex);
                 }else{
                     elemIndexItem.attr("class","title-relation relation-showing");
                 }
@@ -764,12 +772,11 @@ function reloadDataTable(){
                     //console.log('...resizing...');
                 },
                 onResizeEnd: function (column, columns) {
-                    console.log('I have been resized!');
                 }
             },
             columnDefs: [ {
                 orderable: false,
-                targets: [0,1,2,3]
+                targets: [0,1,2,3,4]
             } ]
         });
     }

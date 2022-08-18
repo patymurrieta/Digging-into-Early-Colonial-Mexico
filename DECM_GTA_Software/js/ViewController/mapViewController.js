@@ -1,4 +1,6 @@
 
+var bndMapUpdating =false;
+var arraySelectedByMap = [];
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 var map = new mapboxgl.Map({
@@ -19,6 +21,21 @@ map.setStyle('mapbox://styles/mapbox/light-v10');//se lanza el light por defecto
 const nav = new mapboxgl.NavigationControl({
     showCompass: false
 });
+
+$('#mapid').mousedown(function(e){
+    bndMapMouseUp = false;
+    console.log(" Se dio mousedown");
+});
+
+$('#mapid').mouseup(function(e){
+    /*if(arraySelectedByMap.length>0)
+    {
+        keywords = arraySelectedByMap;
+        executeQueryByCoords();
+    }
+    console.log(arraySelectedByMap);*/
+});
+
 
 map.addControl(nav, 'top-left');
 
@@ -47,9 +64,10 @@ map.on('draw.update',updateArea);
 
 function updateArea(e) {
     var data = draw.getAll();
-    var arraySelectedByMap = [];
+    arraySelectedByMap = [];
     if(data.features.length >0){
         $.each(data.features, function (index,polygon) {
+
             $.each(getAllMarkersGazetteer(), function(indexPoint, gazetteerPoint){
                 var pt = turf.point([gazetteerPoint.longitude,gazetteerPoint.latitude]);
                 var poly = turf.polygon(polygon.geometry.coordinates);
@@ -59,13 +77,6 @@ function updateArea(e) {
                 }
             });
         });
-
-        if(arraySelectedByMap.length>0)
-        {
-            keywords = arraySelectedByMap;
-            executeQueryByCoords();
-        }
-            console.log(arraySelectedByMap);
     }
 }
 

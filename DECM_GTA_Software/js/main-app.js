@@ -5,6 +5,8 @@ var bndClickTags=true;
 
 var testParagrah ="";
 $(function() {
+
+
     if (window.File && window.FileReader && window.FileList && window.Blob) {
         $("#loader").css("display", "none");
         $("#corpus-loader-trigger").click(function () {
@@ -19,6 +21,8 @@ $(function() {
     } else {
         alert('The File APIs are not fully supported in this browser.');
     }
+
+
 
     $("#cbToolSelectText").change(function (e){
         var corpusContainer = $("#textCorpus");
@@ -79,14 +83,14 @@ $(function() {
 
 
     $("#contextLenghtSlider").change(function (e) {
-        if($("#contextLenghtSlider").val() >=10 && $("#contextLenghtSlider").val() <=100) {
+        if($("#contextLenghtSlider").val() >=10 && $("#contextLenghtSlider").val() <=250) {
             document.getElementById("contextLenght").innerHTML = $("#contextLenghtSlider").val();
             loadContextAndGazetterData(coincidences,false);
         }
     });
 
     $("#contextLenghtSlider2").change(function (e) {
-        if($("#contextLenghtSlider2").val() >=10 && $("#contextLenghtSlider2").val() <=100) {
+        if($("#contextLenghtSlider2").val() >=10 && $("#contextLenghtSlider2").val() <=250) {
             var contextLenght = $("#contextLenghtSlider2").val();
             document.getElementById("contextLenght2").innerHTML = contextLenght;
             document.getElementById("contextLenght").innerHTML = $("#contextLenghtSlider2").val();
@@ -272,7 +276,6 @@ function parenthesisPosition() {
     var substring = textarea.value.substring(0,positionOfString);
     if(substring.lastIndexOf("(")!== -1)
         if(substring.substring(substring.lastIndexOf("(")-8,substring.lastIndexOf("("))=== "KEYWORDS" && substring.lastIndexOf(")")=== -1) {
-            console.log("ingresarás keywords");
            inputKeywordsBnd = true;
         }else
             inputKeywordsBnd = false;
@@ -402,7 +405,6 @@ function processCorpusFragment(fileName, fileContent, typeInput,part,key){
 
 
     if(relation.length === 0) {
-        console.log("Se hace la primera vez");
         /* EMILIO */
         $("#first>.index>.content").append(buildIndexItem(fileName.substring(0, fileName.lastIndexOf(".")), key));
 
@@ -553,7 +555,6 @@ function searchAnnotationMatches(span){
         }
 
         if (toSearch !== "" ) {
-            console.log(toSearch);
             annotationTable.innerHTML = "";
             coincidences = runFilterByKeyword(toSearch.toLowerCase());
             let contextContent = document.getElementById("contextContent");
@@ -780,6 +781,8 @@ function highlightCoincidences(array){
 function showContextCoincidence(leftContext, words, rightContext, elementoToSmooth,relation,contextContent) {
     var line = document.createElement("tr");
     line.setAttribute("class", "context-coincidence");
+    line.setAttribute("data-bs-toggle","popover");
+    line.setAttribute("data-bs-content","Some content inside the popover");
 
     var columnRelation = document.createElement("td");
     columnRelation.setAttribute("class", "title-context-right");
@@ -797,7 +800,7 @@ function showContextCoincidence(leftContext, words, rightContext, elementoToSmoo
     columnKeyWords.addEventListener("click", function () {
         elementoToSmooth.scrollIntoView({ block: 'start',  behavior: 'smooth' });
     });
-    line.appendChild(columnKeyWords);
+    line.appendChild(columnKeyWords + "prueba");
 
     var columnContextRight = document.createElement("td");
     columnContextRight.setAttribute("class", "title-context-right ");
@@ -829,6 +832,16 @@ function getTextOfHtml(key,paragraph){
     var newObject = $("<p></p>").html(paragraphHtmlText);
     return newObject.text();
 
+}
+
+function getParagraphCount(key){
+    return $("div[key='"+key+"'] > p").length;
+}
+
+function  getLastAnnotationOfParagraph(key, paragraph)
+{
+
+    return $("div[key='" + key + "'] > p."+ paragraph +" > span:last-child");
 }
 
 function getLeftContext(leftContext) {
@@ -1064,7 +1077,6 @@ function downloadFileExported(type,e,ext){
 
     if(getAnnotationsToExport().length>0) {
         var contentCoincidences;
-        //console.log("archivo a descargar"+ ext);
         if (ext === "json")
             contentCoincidences = JSON.stringify(annotationsToExport);
         else
@@ -1103,12 +1115,10 @@ function getKeysToCSV(listObjects){
 }
 
 function convertJSONToCSV(dataJson){
-    console.log(dataJson);
     var fields = getKeysToCSV(dataJson);
 
 
     var replacerReference = function (key,value){
-        console.log(value);
         var result = '';
         if(value === null || value === undefined)
             result = '';
@@ -1158,7 +1168,6 @@ function convertJSONToCSV(dataJson){
                 else if(fieldName === "labels")
                     return JSON.stringify(row[fieldName],replacerLabels).replace(/\\"/g, '""') ;
                 else {
-                    console.log("columna de referencia: "+ fieldName);
                     return JSON.stringify(row[fieldName], replacerReference).replace(/\\"/g, '""');
                 }
         }).join(',')

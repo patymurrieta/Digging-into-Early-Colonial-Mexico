@@ -17,6 +17,7 @@
   <!-- Google Fonts Roboto -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
   <!-- Bootstrap core CSS -->
+
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- Material Design Bootstrap -->
   <link rel="stylesheet" href="css/mdb.min.css">
@@ -1188,7 +1189,7 @@ either by double-clicking on a single annotation, or by selecting text with the 
                         <div class="row wrapper">
                           <div class="filter-body-text" style="margin-left: 20px; margin-right: 10px; margin-top: 10px; margin-bottom: 0px; padding: 0;">Context size</div>
                           <div class="col-md-10">
-                            <input type="range" min="10" max="100" value="30" class="slider" id="contextLenghtSlider">
+                            <input type="range" min="10" max="250" value="30" class="slider" id="contextLenghtSlider">
                           </div>
                           <div class="col-md-2 filter-body-text grey-text" id="contextLenght">30</div>
                         </div>
@@ -1206,6 +1207,7 @@ either by double-clicking on a single annotation, or by selecting text with the 
                         <table  class="customers table display pageResize" id="table-context-scroll">
                           <thead >
                           <tr>
+                            <th scope="col" class="title-context-center">click</th>
                             <th scope="col" class="title-context-center">Document</th>
                             <th scope="col" class="title-context-center">Left</th>
                             <th scope="col" class="title-context-center">Term</th>
@@ -1244,6 +1246,7 @@ either by double-clicking on a single annotation, or by selecting text with the 
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="js/popper.min.js"></script>
 <!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/esm/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="js/mdb.min.js"></script>
@@ -1253,7 +1256,7 @@ either by double-clicking on a single annotation, or by selecting text with the 
   <script type="text/javascript" src="js/ViewController/gazetteerViewController.js"></script>
   <script type="text/javascript" src="js/DataController/dataFrameController.js"></script>
   
-  
+  <script type="text/javascript" src="js/tools/filters.js"></script>
   <!-- EMILIO -->
   <script type="text/javascript" src="js/data/management.js"></script>
   <script src="js/main-app.js"></script>

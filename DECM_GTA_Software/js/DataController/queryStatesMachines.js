@@ -110,8 +110,7 @@ positionInString = 0;
     parenthesis[1]=0;
 if(document.getElementById("queryOfEntity").value  !== "") {
     var indexError = getNewState(currentStateGlobal, queryTest1);
-    //console.log("Current State: "+ currentStateGlobal);
-    //console.log(QueryNode);
+
     if(QueryNode.allLabels){
         errorStatesMachine("you are going to get all the labels of the entity","green","disabled",true);
     }else if(currentStateGlobal !== terminalStates[0] && currentStateGlobal !==terminalStates[1] && currentStateGlobal !==terminalStates[2] && currentStateGlobal !==terminalStates[3]) {
@@ -171,7 +170,6 @@ function getNewState(currentState,query) {
 
                     if(alfabeto[index].localeCompare(" ")===0){
 
-                       // console.log("query: "+queryTest1+ "state:" +currentStateGlobal + " index" +queryTest1.indexOf(" "));
                     }else{
                         if (currentStateGlobal === 0 && alfabeto[index].localeCompare("(") === 0) {
                             QueryNode.positionOpenParenthesis = positionInString;
@@ -472,11 +470,57 @@ function loadContextAndGazetterData(coincidences,bndFindInMap){
    // reloadDataTable(coincidences);
     asyncCallLoadContext(coincidences,counterContextChunk);
 
-    if(bndFindInMap) {
-        console.log("buscar en mapa");
         var toponymsFiltered = filterToponymsDuplicates(coincidences);
+        if(toponymsFiltered.length===0) {
+
+            var leftToponyms = getLeftToponymsInGazetteer(coincidences);
+            toponymsFiltered = leftToponyms;
+
+            var rightToponyms = getRightToponymsInGazetteer(coincidences);
+
+            rightToponyms.forEach(rightToponym=>{
+                if(!toponymsFiltered.includes(rightToponym))
+                    toponymsFiltered.push(rightToponym);
+            });
+
+            var titleDocumentToponyms = getToponymsByDocuments(coincidences);
+
+            titleDocumentToponyms.forEach(toponymTitle=>{
+                if(!toponymsFiltered.includes(toponymTitle))
+                toponymsFiltered.push(toponymTitle);
+            });
+
+
+        }
         findCoincidencesInGazetteer(toponymsFiltered);
-    }
+    $('[data-toggle="popover"]').popover();
+}
+
+function getLeftToponymsInGazetteer(annotations)
+{
+    var toponyms= [];
+
+    annotations.forEach(function (annotation){
+        var leftToponym = getLeftReferenceInGazetteer(annotation.index, annotation,annotation.paragraph,annotation.index);
+        if(leftToponym !== null)
+            toponyms.push(leftToponym);
+    });
+
+    return getToponymFieldsOfReferences(filterReferencesDuplicated(toponyms));
+}
+
+function getRightToponymsInGazetteer(annotations)
+{
+    var toponyms= [];
+
+    annotations.forEach(function (annotation){
+        var numberOfParagraph = getParagraphCount(annotation["key"]);
+        var rightToponym = getRightReferenceInGazetteer(annotation.index,annotation, annotation.paragraph, numberOfParagraph);
+        if(rightToponym !== null)
+            toponyms.push(rightToponym);
+    });
+
+    return getToponymFieldsOfReferences(filterReferencesDuplicated(toponyms));
 }
 
 function chunkSubstr(str, size) {
@@ -537,20 +581,17 @@ function appendContextCoincidences(sizeCoincidences,start,setNumber){
                 if(setToDisplay <= sizeCoincidences) {
 
                     if(start === 1 ) {
-                        console.log("de "+ 0 +" a "+ setNumber);
                         let contextContent= document.getElementById("contextContent");
                         contextContent.innerHTML = "";
                         document.getElementById("annotations-table").innerHTML = "";
                         reloadContextCoincidences(coincidences.slice(0, setNumber),setToDisplay-setNumber);
                     }
                     else {
-                        console.log("de "+ (setToDisplay - setNumber) +" a "+ setToDisplay);
                         reloadContextCoincidences(coincidences.slice(setToDisplay - setNumber, setToDisplay),setToDisplay-setNumber);
                     }
                     resolve( setToDisplay + " de ");
                 }
                 else {
-                    console.log("de "+ setToDisplay-setNumber +" a "+ sizeCoincidences);
                     reloadContextCoincidences(coincidences.slice(setToDisplay-setNumber,sizeCoincidences),setToDisplay-setNumber)
                     resolve("END");
                 }
@@ -573,7 +614,6 @@ function parseSibling(sibling, i) {
         i -= 1;
         return sibling["outerHTML"];
     } else {
-        console.log("UNKNOW NODE");
         return "|";
     }
 }
@@ -589,7 +629,6 @@ function parseSiblingOnlyText(sibling,i){
         i -= 1;
         return sibling["innerHTML"];
     } else {
-        console.log("UNKNOW NODE");
         return "|";
     }
 }
@@ -601,6 +640,17 @@ function showHTMLContext(relation,leftContext, words, rightContext, elementoToSm
     var line = document.createElement("tr");
 
     line.setAttribute("class", "context-coincidence");
+    var columnClick = document.createElement("td");
+    columnClick.innerText = "+";
+    columnClick.setAttribute("tabindex","0");
+    columnClick.setAttribute("data-toggle","popover");
+    columnClick.setAttribute("data-html","true");
+    columnClick.setAttribute("data-placement","top");
+    columnClick.setAttribute("data-trigger","click");
+    columnClick.setAttribute("data-content",leftContext + "<span class='annotated top-highlighted'> "+words+"</span>" + rightContext);
+    columnClick.setAttribute("role","button");
+
+    line.appendChild(columnClick);
 
     var columnRelation = document.createElement("td");
     columnRelation.setAttribute("class", "title-context-relation");
@@ -1086,7 +1136,6 @@ var yearQuery=0;
         yearQuery = getYearOfDate(labelQuery);
         yearAnnotation = getYearOfDate(labelAnnotation);
         if(yearQuery !== undefined && yearAnnotation !== undefined) {
-            console.log("Fechas: "+yearQuery + " annotation:"+ yearAnnotation)
 
             if (yearAnnotation >= yearQuery)
                 bnd = true;
@@ -1169,7 +1218,6 @@ function isInParenthesis(query,cursorPosition) {
     {
         if(cursorPosition > query.positionOpenParenthesis && cursorPosition <= query.positionCloseParenthesis)
         {
-            console.log("dentro de : ("+ query.positionOpenParenthesis + " ): "+ query.positionCloseParenthesis);
 
             if((query.firstLabel !== "" && query.secondLabel !== "") || (query.childQueryNode !== null && query.secondLabel !== "") || (query.childQueryNode !== null && query.secondChildQueryNode !== null) || (query.firstLabel !== "" && query.secondChildQueryNode !== null))
                 return query.positionCloseParenthesis;

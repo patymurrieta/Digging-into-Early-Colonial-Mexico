@@ -15,7 +15,6 @@ function refreshGazetteerDataSet(){
     var toponymsFiltered = filterToponymsDuplicates(central);
 
     xhttp.open("POST", "https://colonialatlas.com/api/toponym",true);
-console.log(JSON.stringify(toponymsFiltered));
     var formData = new FormData();
     formData.append("toponyms",JSON.stringify(toponymsFiltered));
 
@@ -25,21 +24,17 @@ console.log(JSON.stringify(toponymsFiltered));
             if(xhttp.status === 200 || xhttp.status === 201) {
                 showMap();
                 let ann = JSON.parse(xhttp.responseText);
-                console.log(ann);
                 loadPointsOfGazetteer(ann);
 
             }
             else if(this.status === 500) {
                 hideMap("Error 500: interno en el servidor","fa-exclamation-circle","fa-spinner");
-                //console.log("Error interna con el servidor");
             }
             else if (this.status === 404) {
                 hideMap("Page not founded,  error code:" + this.status,"fa-exclamation-circle","fa-spinner");
-                //console.log("Página no encontrada");
             }
             else {
                 hideMap("Error loading data, error code:" + this.status,"fa-exclamation-circle","fa-spinner");
-                //console.log("Error loading page" + this.status);
             }
 
             bndRefreshGazetteer = true;
@@ -160,8 +155,7 @@ function createMarker(id,toponym,altitude,longitude,latitude,country, county,ref
                     getPopUpToponym(toponym,latitude,longitude,country,country,references,pages,volumen,tome,author,"map"))
                 );
              
-        }else
-            console.log("dato no permitido" + toponym + " lat:"+ latitude+ " lng:"+ longitude);
+        }
 
          if(marker!== null)
              marker.addTo(map);
@@ -195,7 +189,6 @@ function convertReferencesToHTMLTable(toponym){
 }
 
 function showMakersByKeyWords(keyWords) {
-
 
     getAllMarkersGazetteer().filter(function (maker){
        if( $.inArray(maker.keyWords.toLowerCase(),keyWords) !== -1)

@@ -166,11 +166,9 @@ function processJSONFile(file){
       else
          nameForFindingKey = nameFile.substring(0, nameFile.lastIndexOf("."));
 
-      console.log("Bucando llave:" + nameForFindingKey);
       var documentKey = corpusFramentsKeys[nameForFindingKey];
 
       //if(documentKey === undefined || documentKey === null)
-         console.log(corpusFramentsKeys);
 
 
         buildAnnotations(nameFile, JSON.parse(e.target.result), documentKey);

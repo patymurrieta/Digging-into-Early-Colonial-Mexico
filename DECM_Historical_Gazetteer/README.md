@@ -12,10 +12,11 @@ The gazetteer is composed of 71 files with geographic information of colonial pr
   be provisionally consulted here: <link>. The information is organised by RG volume. It also includes layers and tables 
   of historical information digitised and/or created by the project from secondary sources. All is accompanied by 
   metadata, including the DECM Gazetteer Registry. 
-  This set is composed by: a) all toponyms with coordinates, mentioned and disambiguated from the edited collections 
-  of the RGs and from secondary sources; b) 30 geographical layers of additional historical information derived from 
-  secondary sources; c) 32 tables with other important historical information related to the RGs; and d) the DECM 
-  Gazetteer Registry.
+This set is composed by: a) all toponyms with coordinates, mentioned and disambiguated from the edited collections of the RGs and 
+from secondary sources as specified below; b) 30 geographical layers of additional historical information derived from secondary sources; 
+c) 32 tables with other important historical information related to the RGs; d) a table with the percentages of disambiguation achieved 
+for each volume; e) the DECM Gazetteer Registry; f) a text file with the sources used for disambiguation; and g) a README file with all 
+information on the dataset.
   
 2. The DECM 16th century Gazetteer:
 	This version constitutes a subset of the main DECM Historical Gazetteer, including only the toponyms that were 

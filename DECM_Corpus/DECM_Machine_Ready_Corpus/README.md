@@ -35,6 +35,12 @@ by King Phillip of Spain, compiled between 1579 and 1585 in New Spain:
           8_RG_Mexico_T3_Acuna.txt
           9_RG_Michoacan_Acuna.txt
           10_RG_Nueva Galicia_Acuna.txt
+ 
+René Acuña, Relaciones Geográficas Del Siglo XVI, 1a ed., 10 vols, Serie Antropológica, 
+(Universidad Nacional Autónoma de México, Instituto de Investigaciones Antropológicas, 1982).
+
+Each of these files contains the textual accounts answering the 50 questions royal decree issued 
+by King Phillip of Spain, compiled between 1579 and 1585 in New Spain.
 
 2. Two volumes of the Relaciones Histórico-geográficas de la Gobernación de Yucatán edited by 
 Mercedes de la Garza, which complement the work of Acuña:
@@ -42,10 +48,17 @@ Mercedes de la Garza, which complement the work of Acuña:
           11_RGs_Yucatan_T1_DeLaGarza.txt
           12_RGs_Yucatan_T2_DeLaGarza.txt
 
+Mercedes De la Garza et al., eds., Relaciones histórico-geográficas de la gobernación de Yucatán: 
+Mérida, Valladolid y Tabasco., 1a ed., 2 vols, Fuentes para el estudio de la cultura maya 1, 
+(México, D.F: Universidad Nacional Autónoma de México, 1983).
+
 3. Volume 1 of the Papeles de la Nueva España. Segunda Serie Geográfica y Estadística (1905), edited by Francisco 
 del Paso y Troncoso, which provides additional information about the 16th century geographies:
 
           14_Suma_Visita_Pueblos_DelPasoYTroncoso.txt
+          
+Francisco del Paso y Troncoso, Suma de Visitas de Pueblos Por Orden Alfabético: Manuscrito 2.800 de Las Biblioteca Nacional de Madrid, 
+Relaciones Geográficas de La Diócesis de Tlaxcala. (Madrid: Estab. tip. ‘Sucesores de Rivadeneyra’, 1905)
 
 4. The Instrucción de las Relaciones Geográficas, which is the royal decree issued by King Phillip II of Spain 
 consisting of 50 questions that had to be answered by the Spanish religious and political authorities located 

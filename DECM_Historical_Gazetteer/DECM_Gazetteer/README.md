@@ -38,7 +38,7 @@ In total, the gazetteer includes 71 main files with geographic information of co
 
 In total, the gazetteer includes 71 main files with geographic information of colonial jurisdictions (e.g. provincias, alcaldías, corregimientos, diócesis) and thousands of historical cities, towns, villages, and other places. 
 
-We have also produced a report explaining the process, methods, and lessons learnt from the creation of the gazetteer. This can be dowloaded here: ['The Creation of the DECM Historical Gazetteer']().
+We have also produced a report explaining the process, methods, and lessons learnt from the creation of the gazetteer. This can be dowloaded here: ['The Creation of the DECM Historical Gazetteer'](https://docs.google.com/document/d/1yC5-lDeN-piIJaDC2kAVfIqi1YqBeN2A8_Ft-Cskyq4/edit?usp=sharing).
 
 ### Content: 
 ``` 

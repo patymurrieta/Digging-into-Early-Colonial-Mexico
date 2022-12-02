@@ -12,7 +12,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 
 ### How to cite this resource: 
 ``` 
-Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Liceras-Garrido, R., Favila-Vázquez, M., and Bellamy, K. (2020) 
+Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Liceras-Garrido, R., Favila-Vázquez, M., and Bellamy, K. (2023) 
 DECM Historical Gazetteer. T-AP Digging into Early Colonial Mexico Project. Figshare, Dataset. 
 DOI:10.6084/m9.figshare.12301682
 ```

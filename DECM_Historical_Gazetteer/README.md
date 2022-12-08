@@ -262,14 +262,14 @@ Starr, Frederick, Aztec Place-Names: Their Meaning and Mode of Composition, (Chi
 
 ``` 	
 ### Copyright
-(2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
+(2023) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
 ``` 
-Licensed under the Creative Commons Attribution-ShareAlike 4.0 International 
-(CC BY-SA 4.0) (the "License");
-you may not use this file except in compliance with the License.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License 
+(CC BY-NC-SA 4.0) (the "License");
+you may not use these files except in compliance with the License.
 You may obtain a copy of the License at
 
-   https://creativecommons.org/licenses/by-sa/4.0/
+   https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

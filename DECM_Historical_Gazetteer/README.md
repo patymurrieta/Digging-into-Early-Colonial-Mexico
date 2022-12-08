@@ -1,4 +1,4 @@
-# DECM_Gazetteer
+# DECM Historical Gazetteer
 
 ## Project information: 
 The Digging into Early Colonial Mexico: A large-scale computational analysis of 16th century historical sources project uses the corpus known as Relaciones Geográficas de la Nueva España – one of the most important colonial historical sources of America – concerned with the territory of Mexico and the historical source called Suma de Visitas de Nueva España, to create and develop novel computational approaches for the semi-automated exploration of thousands of pages contained in these sixteenth century documents.

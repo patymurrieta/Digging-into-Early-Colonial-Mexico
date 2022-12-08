@@ -13,8 +13,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 ### How to cite this resource: 
 ``` 
 Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Liceras-Garrido, R., Favila-Vázquez, M., and Bellamy, K. (2023) 
-DECM Historical Gazetteer. T-AP Digging into Early Colonial Mexico Project. Figshare, Dataset. 
-DOI:10.6084/m9.figshare.12301682
+Digging into Early Colonial Mexico Historical Gazetteer. Figshare, Dataset. DOI:10.6084/m9.figshare.12301682
 ```
 ### Gazetteer Description: 
 The DECM historical gazetteer was created in the context of the “[Digging into Early Colonial Mexico](https://www.lancaster.ac.uk/digging-ecm/)” project. It is a digital directory of historical places of Mexico and Guatemala created from information from primary sources and research carried out by the team, as well as information collected from comprehensive studies on the political, religious, and administrative units of the Viceroyalty of New Spain.

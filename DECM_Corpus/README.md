@@ -13,14 +13,27 @@ The DECM Corpus is a digital corpus produced from the original editions of the t
 	collection. This version contains only the original text of each of the RGs as transcribed by the 
 	scholars, excluding any editorial note, commentary, or historical work. This can be therefore used 
 	directly for corpus linguistics analyses, visualisations, etc.
+	
+	Please cite this resource as: 
+	Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B. (2023) DECM Machine Ready Corpus. 
+	Figshare, Dataset. DOI:10.6084/m9.figshare.12048729
+``` 	
 
-2. The DECM Gold Standard Corpus: 
+``` 
+
+2. The DECM ML-Training Corpus: 
 	This version contains a sample of the RGs manually annotated by multiple researchers with the 
 	software of our industry partner, Tagtog. This corpus has been used to carry out the NLP and ML 
 	experiments and the files are available in JSON and TSV format. These files are composed by texts 
 	and annotations. This is also accompanied by the DECM ontology which provides an explanation of the 
 	entities and labels produced. This corpus can be used for further experimentation with Artificial 
 	Intelligence methods.
+	
+	Please cite this resource as:
+	Murrieta-Flores, P., Liceras-Garrido, R., Favila-Vázquez, M., Jiménez-Badillo, D. (2023) DECM ML Training Corpus. 
+	Figshare, Dataset. DOI:10.6084/m9.figshare.12366734
+``` 
+``` 
 
 3. The DECM Machine Annotated Corpus: 
 	This is the version of the entire RG corpus automatically annotated using the ML models trained with
@@ -28,7 +41,12 @@ The DECM Corpus is a digital corpus produced from the original editions of the t
 	the file for the DECM Ontology. This corpus can be further used for quantitative and qualitative 
 	research, as well as advanced analyses using text mining techniques, corpus linguistics and other 
 	methods such as Geographical Text Analysis. 
-
+	
+	Please cite this resource as:
+	Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B., Favila-Vázquez, M., Liceras-Garrido, R.(2023) 
+	DECM Annotated Corpus. Figshare, Dataset. DOI:10.6084/m9.figshare.12366956
+``` 
+``` 
 4. The DECM Ontology and Annotation Rules:
 This .xls file contains two sheets. The one called 'Ontology' defines the entities and labels used to annotate 
 the corpus of the RGs. This comprises 18 entities and labels marking important social, political, territorial, 
@@ -50,7 +68,7 @@ Our highly interdisciplinary team is combining techniques from different discipl
 https://www.lancaster.ac.uk/digging-ecm/
 
 ### How to cite this resource: 
-Each of the versions has its own DOI, please see the README file for a full citation of the version you are interested on.
+Each of the versions has its own DOI, please see the above for a full citation of the version you are interested on.
 
 ### Copyright
 (2023) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins

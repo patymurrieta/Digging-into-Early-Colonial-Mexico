@@ -2,9 +2,9 @@
 # The DECM Geographical Text Analysis Software -COMING IN 2022!
 
 ## What you will find here
-The GTA software is being developed in collaboration with the [National Centre of High Performance Computing in Mexico](http://www.cns-ipicyt.mx/youilab) at the moment. Its aim is to carry out spatial queries from annotated texts and an accompanying gazetteer.
+The GTA software developed in two beta versions (v.1 and v.2) combine concepts from Corpus Linguistics, Natural Language Processing, and Geographic Information Systems. Our research group first developed the idea at Lancaster in the context of the Spatial Humanities project (see [Murrieta-Flores et al., 2015])https://www.academia.edu/5897837/Automatically_analysing_large_texts_in_a_GIS_environment_The_Registrar_Generals_reports_and_cholera_in_the_nineteenth_century_). A detailed description of the method as implemented in the software can be found in Jiménez-Badillo et al., 2021., Murrieta-Flores et al., 2022., and Murrieta-Flores et al., 2023-forthcoming. The method involves applying Geographic Collocation Analysis. The software combines an interface with a corpus viewer, a query interface, and a keyword in-context tool connected to a map explorer and a historical gazetteer. The tool identifies concepts and/or terms and their associations to places with their coordinates in very large corpora, allowing to explore the corpus in different ways and download the results for further analysis in Geographic Information Systems or other tools. 
 
-You will find here also detailed documentation on its use and related publications.
+In the current version, the software works by uploading an annotated corpus and bringing a historical gazetteer through an API. We are still developing the tool to open it to other users so everyone can work with their tailored corpora and gazetteers created by them or bring them from projects such as the World Historical Gazetteer. At the moment, a demo with a sample of the corpus of the Relaciones Geográficas can be explored here.
 
 ### Contents:
 ``` 

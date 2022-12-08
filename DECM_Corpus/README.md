@@ -30,7 +30,12 @@ The DECM Corpus is a digital corpus produced from the original editions of the t
 	methods such as Geographical Text Analysis. 
 
 4. The DECM Ontology and Annotation Rules:
-This .xls file contains two sheets. The one called 'Ontology' defines the entities and labels used to annotate the corpus of the RGs. This comprises 18 entities and labels marking important social, political, territorial, religious, and economic information. The second one, called 'Annotation rules' includes the basic rules followed by all the annotators in the project and examples that help to make decisions while carrying out the annotations. These rules were thought to achieve a better annotator consensus which in some cases reached up to 98 per cent in some entities.  
+This .xls file contains two sheets. The one called 'Ontology' defines the entities and labels used to annotate 
+the corpus of the RGs. This comprises 18 entities and labels marking important social, political, territorial, 
+religious, and economic information. The second one, called 'Annotation rules' includes the basic rules followed 
+by all the annotators in the project and examples that help to make decisions while carrying out the annotations. 
+These rules were thought to achieve a better annotator consensus which in some cases reached up to 98 per cent 
+in some entities.  
 
 ``` 
 

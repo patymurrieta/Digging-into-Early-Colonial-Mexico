@@ -33,8 +33,7 @@ Other 48 layers of relevant historical geographic information were also created,
 
 Accompanying the GIS dataset we also include 31 tables in .csv and .xlsx format. These contain the original indexes of the secondary and primary sources, but also digitised tables with useful historical information related to toponyms, languages, repositories, maps, etc., taken from the books mentioned above. These tables are grouped under the name ‘***DECM Tables***’.
 
-Finally, the ‘***DECM Gazetteer Registry***’ is a key with all necessary metadata for all the GIS layers and tables in the dataset. 
-In total, the gazetteer includes 71 main files with geographic information of colonial jurisdictions (e.g. provincias, alcaldías, corregimientos, diócesis) and thousands of historical cities, towns, villages, and other places. 
+Finally, the ‘***DECM Gazetteer Registry***’ is a key with general metadata for all the GIS layers and tables in the dataset. However, you can also see the metadata in each of the shapefiles with any GIS.
 
 In total, the gazetteer includes 71 main files with geographic information of colonial jurisdictions (e.g. provincias, alcaldías, corregimientos, diócesis) and thousands of historical cities, towns, villages, and other places. 
 

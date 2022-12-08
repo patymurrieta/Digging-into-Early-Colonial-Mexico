@@ -128,7 +128,10 @@ geographies. They have been created by digitising historical studies on 16th cen
         88_gerhard_locations.shp
         75_texcoco_rivers.shp
 
-4. DECM_Tables: Cointains 2 folders with additional tabular data with relevant information about 16th century colonial 
+4. DECM_ADL_AdditionalInformation - Contains the same historical information as DECM_Additional_Information, but 
+attributes headings have been adapted to the Alexandria Digital Library Content Standard schema. 
+
+5. DECM_Tables: Cointains 2 folders with additional tabular data with relevant information about 16th century colonial 
 Mexico in two formats: csv and xlsx
 
         DeLaGarza_Index_Yucatan
@@ -173,7 +176,7 @@ Mexico in two formats: csv and xlsx
         Echenique_relaciones
 
 
-5. Documents:
+6. Documents:
 
 a) DECM_Gazetteer_Disambiguation_Percentage.xlsx - Excel document with the total amount of toponyms included 
 in the primary and secondary sources used, the number and percentage of places disambiguated where X and Y coordinates 
@@ -205,8 +208,9 @@ Acuña, René. 1985. Relaciones Geográficas del siglo XVI: Tlaxcala. Tomo segun
 Acuña, René. 1985. Relaciones Geográficas del siglo XVI: México. Tomo primero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
 Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo segundo. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria. 
 Acuña, René. 1986. Relaciones Geográficas del siglo XVI: México. Tomo tercero. 1 edition. México: Universidad Autónoma de México, Imprenta Universitaria.
-De la Garza, Mercedes. 1983. Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco) Volumen 2: 441-448.
-Del Paso y Troncoso, Francisco. 1905. Papeles de la Nueva España publicados de orden y con fondos del Gobierno Mexicano. Tomo I. Suma de Visitas de Pueblos por Orden Alfabético. Madrid: Biblioteca Nacional de Madrid
+De la Garza, Mercedes., et al. 1983. Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco). Volumen 1. México: Universidad Nacional Autónoma de México.
+De la Garza, Mercedes., et al. 1983. Relaciones histórico-geográficas de la gobernación de Yucatán (Mérida, Valladolid y Tabasco). Volumen 2. México: Universidad Nacional Autónoma de México.
+Del Paso y Troncoso, Francisco. 1905. Papeles de la Nueva España publicados de orden y con fondos del Gobierno Mexicano. Tomo I. Suma de Visitas de Pueblos por Orden Alfabético. Madrid: Biblioteca Nacional de Madrid.
 
 SECONDARY SOURCES
 

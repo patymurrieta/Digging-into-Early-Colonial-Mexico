@@ -2,7 +2,7 @@
 # The DECM Corpus
 
 ## What you will find here
-The DECM Corpus is a digital corpus of the texts of Relaciones Geográficas with different versions, including a machine ready version, a gold standard annotated dataset, and an automatically annotated version ready for text mining and machine learning experiments.
+The DECM Corpus is a digital corpus produced from the original editions of the texts of the Relaciones Geográficas with different versions. These include a machine-ready version, a machine learning annotated training dataset, and an automatically annotated version ready for text mining and machine learning experiments.
 
 ### Contents:
 ``` 
@@ -48,14 +48,14 @@ https://www.lancaster.ac.uk/digging-ecm/
 Each of the versions has its own DOI, please see the README file for a full citation of the version you are interested on.
 
 ### Copyright
-(2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
+(2023) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins
 ``` 
-Licensed under the Creative Commons Attribution-ShareAlike 4.0 International 
-(CC BY-SA 4.0) (the "License");
-you may not use this file except in compliance with the License.
+This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License 
+(CC BY-NC-SA 4.0) (the "License");
+you may not use these files except in compliance with the License.
 You may obtain a copy of the License at
 
-   https://creativecommons.org/licenses/by-sa/4.0/
+   https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,

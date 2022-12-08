@@ -29,9 +29,8 @@ The DECM Corpus is a digital corpus of the texts of Relaciones Geográficas with
 	research, as well as advanced analyses using text mining techniques, corpus linguistics and other 
 	methods such as Geographical Text Analysis. 
 
-4. The DECM Ontology:
-This is the ontology used to annotate the corpus of the RGs. It is constituted by 21 entities and labels 
-marking important social, politic, territorial and economic information. This is available in Excel format. 
+4. The DECM Ontology and Annotation Rules:
+This .xls file contains two sheets. The one called 'Ontology' defines the entities and labels used to annotate the corpus of the RGs. This comprises 18 entities and labels marking important social, political, territorial, religious, and economic information. The second one, called 'Annotation rules' includes the basic rules followed by all the annotators in the project and examples that help to make decisions while carrying out the annotations. These rules were thought to achieve a better annotator consensus which in some cases reached up to 98 per cent in some entities.  
 
 ``` 
 

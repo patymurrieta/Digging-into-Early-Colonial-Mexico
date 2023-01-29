@@ -1,4 +1,4 @@
-# DECM_Machine_Annotated_Corpus -COMING IN 2021!
+# DECM_Machine_Annotated_Corpus 
 
 ## Project information: 
 The Digging into Early Colonial Mexico: A large-scale computational analysis of 16th century historical sources project uses part of the corpus known as Relaciones Geográficas de la Nueva España – one of the most important colonial historical sources of America – concerned with the territory of Mexico, to create and develop novel computational approaches for the semi-automated exploration of thousands of pages contained in these 16th century documents.
@@ -21,9 +21,9 @@ This digital version of the RGs corpus contains only the historical information 
 
 ### Content: 
 ``` 
-1. DECM_Machine_Annotated_Corpus.JSON and .TVS: This is the version of the entire RG corpus automatically annotated using
-the ML models trained with the DECM Gold Standard Corpus. The files are available in TSV format, and it also contains 
-the file for the DECM Ontology. This corpus can be further used for quantitative and qualitative research, as well as 
+1. DECM_Machine_Annotated_Corpus.JSON and .HTML: This is the version of the entire RG corpus automatically annotated using
+the ML models trained with the DECM Gold Standard Corpus. The files are available in HTML format, and it also contains 
+the file for the DECM Ontology called Annotations-legend.json. This corpus can be further used for quantitative and qualitative research, NLP research, as well as 
 advanced analyses using text mining techniques, corpus linguistics and other methods such as Geographical Text Analysis. 
 ``` 
 ### Copyright

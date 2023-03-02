@@ -22,9 +22,14 @@ This digital version of the RGs corpus contains only the historical information 
 ### Content: 
 ``` 
 1. DECM_Corpus_Fully_Annotated.rar Contains files for each individual Geographic Report of New Spain fully annotated through the Tagtog Tool.
-It contains .ann.json and html files that accompany each other. Each of the folders contain also a file called Annotations-legend.json. that includes the information on the entities and labels used for the annotation. The annotations are based on 18 entitites identifying words and concepts in the corpus related to these categories: person, date, institution, location, animal, activity, plant, food, natural resource, cultural artefact, architecture, health, mobility, climate, ethnic group, social group, language, and measurement. Each of these might include labels to further classify the information (e.g. the entity "Person" includes labels for male/female, title, profession, saint, deidity). Please see the files and README for more information on the DECM Ontology. 
-This corpus can be further used for quantitative and qualitative research, NLP research, as well as 
-advanced analyses using text mining techniques, corpus linguistics and other methods such as Geographical Text Analysis. 
+It contains .ann.json and html files that accompany each other. Each of the folders contain also a file called Annotations-legend.json. that 
+includes the information on the entities and labels used for the annotation. The annotations are based on 18 entitites identifying words and 
+concepts in the corpus related to these categories: person, date, institution, location, animal, activity, plant, food, natural resource, 
+cultural artefact, architecture, health, mobility, climate, ethnic group, social group, language, and measurement. Each of these might include 
+labels to further classify the information (e.g. the entity "Person" includes labels for male/female, title, profession, saint, deidity). Please 
+see the files and README for more information on the DECM Ontology. 
+This corpus can be further used for quantitative and qualitative research, NLP research, as well as advanced analyses using text mining techniques, 
+corpus linguistics and other methods such as Geographical Text Analysis. 
 ``` 
 ### Copyright
 (2020) Patricia Murrieta-Flores, Diego Jiménez-Badillo & Bruno Martins

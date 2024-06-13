@@ -8,7 +8,7 @@ In the current version, the software works by uploading an annotated corpus and 
 
 ### How to cite this resource:
 ``` 
-Alvarez-Rivera, L., Hernández-Huerfano, E., Murrieta-Flores, P., Jiménez-Badillo, D., and Martins, B. (2023) 
+Murrieta-Flores, P., Jiménez-Badillo, D., Martins, B. Alvarez-Rivera, L., and Hernández-Huerfano, E.  (2023) 
 DECM Geographical Text Analysis Software. Figshare, software. DOI:10.6084/m9.figshare.21696794
 ``` 
 
